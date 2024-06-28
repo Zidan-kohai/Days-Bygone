@@ -515,6 +515,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1683194539}
+  - component: {fileID: 1683194540}
   m_Layer: 0
   m_Name: EnemyHandler
   m_TagString: Untagged
@@ -537,6 +538,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2046066855}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1683194540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1683194538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 017344a929b26d5468ea3c07cab1d713, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waves:
+  - time: 1
+    enemies:
+    - Type: 0
+      Count: 1
+  - time: 3
+    enemies:
+    - Type: 0
+      Count: 2
+    - Type: 1
+      Count: 1
+  - time: 7
+    enemies:
+    - Type: 0
+      Count: 5
+    - Type: 1
+      Count: 5
+  skeletonPrefab: {fileID: 4741007364523354012, guid: 87967befd84bfcc4d9275289aebdbedc, type: 3}
+  cyborgPrefab: {fileID: 8604351509011897016, guid: 2abd35fab0bacfb40b6feaf0a3f45ba8, type: 3}
 --- !u!4 &1690731833 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4840031995278418682, guid: c476b3cf12a60504bb95e6d1e69afbce, type: 3}

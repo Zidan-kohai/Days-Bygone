@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Cyborg
   m_EditorClassIdentifier: 
   Health: 140
-  Speed: 4
+  Speed: 2
   Damage: 4
   Reward: 10

@@ -1,3 +1,5 @@
+using System;
+using System.Collections;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.UI;
@@ -10,6 +12,7 @@ namespace Unit.Enemy.Base
         [SerializeField] protected Rigidbody2D rb;
         [SerializeField] protected Slider healthView;
         [SerializeField] protected Animator animator;
+        [SerializeField] protected SpriteRenderer spriteRenderer;
         protected EnemyState state;
         protected float health;
         protected float speed;
@@ -24,6 +27,7 @@ namespace Unit.Enemy.Base
             reward = config.Reward;
 
             healthView.maxValue = config.Health;
+            healthView.value = config.Health;
         }
 
         private void Update()
@@ -31,10 +35,13 @@ namespace Unit.Enemy.Base
             switch(state)
             {
                 case EnemyState.Walk:
+                    OnWalk();
                     break;
                 case EnemyState.Attack:
+                    OnAttack();
                     break;
                 case EnemyState.Death:
+                    OnDeath();
                     break;
             }
         }
@@ -87,6 +94,17 @@ namespace Unit.Enemy.Base
             {
                 OnDeath();
             }
+            else
+            {
+                StartCoroutine(DamageAnimation());
+            }
+        }
+
+        private IEnumerator DamageAnimation()
+        {
+            spriteRenderer.color = Color.red;
+            yield return new WaitForSeconds(0.3f);
+            spriteRenderer.color = Color.white;
         }
 
         protected enum EnemyState

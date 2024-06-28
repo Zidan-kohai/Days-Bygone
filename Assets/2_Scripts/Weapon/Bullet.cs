@@ -20,14 +20,14 @@ public class Bullet : MonoBehaviour
         Destroy(gameObject);
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnColliderEnter(Collision other)
     {
-        if(other.TryGetComponent(out Enemy enemy))
+        if(other.gameObject.TryGetComponent(out Enemy enemy))
         {
             enemy.GetDamage(damage);
             Destroy(gameObject);
         }
 
-        Debug.Log($"Collider with {other.name}");
+        Debug.Log($"Collider with {other.gameObject.name}");
     }
 }
