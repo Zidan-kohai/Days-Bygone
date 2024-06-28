@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 646684143594252415}
   - component: {fileID: 5479900294085569001}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Fance_02
   m_TagString: Fance
   m_Icon: {fileID: 0}
@@ -70,9 +70,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -1604070495
+  m_SortingLayer: 1
+  m_SortingOrder: 1
   m_Sprite: {fileID: 1810276830, guid: b8ea98283abdd5c48831b8cb6a9f12db, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -94,7 +94,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4212484320941108230}
   - component: {fileID: 2636416931358521996}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Fance_06
   m_TagString: Fance
   m_Icon: {fileID: 0}
@@ -154,9 +154,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -1604070495
+  m_SortingLayer: 1
+  m_SortingOrder: 1
   m_Sprite: {fileID: 1810276830, guid: b8ea98283abdd5c48831b8cb6a9f12db, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -178,7 +178,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4840031995278418682}
   - component: {fileID: 737438430456195675}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Fances
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -261,7 +261,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5221939555600842008}
   - component: {fileID: 1398984046926516044}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Fance_05
   m_TagString: Fance
   m_Icon: {fileID: 0}
@@ -321,9 +321,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -1604070495
+  m_SortingLayer: 1
+  m_SortingOrder: 1
   m_Sprite: {fileID: 1810276830, guid: b8ea98283abdd5c48831b8cb6a9f12db, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -345,7 +345,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3786287822072196120}
   - component: {fileID: 4538792990368933562}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Fance_04
   m_TagString: Fance
   m_Icon: {fileID: 0}
@@ -405,9 +405,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -1604070495
+  m_SortingLayer: 1
+  m_SortingOrder: 1
   m_Sprite: {fileID: 1810276830, guid: b8ea98283abdd5c48831b8cb6a9f12db, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -429,7 +429,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3392332614869254304}
   - component: {fileID: 5553743725879841182}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Fance_03
   m_TagString: Fance
   m_Icon: {fileID: 0}
@@ -489,9 +489,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -1604070495
+  m_SortingLayer: 1
+  m_SortingOrder: 1
   m_Sprite: {fileID: 1810276830, guid: b8ea98283abdd5c48831b8cb6a9f12db, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -513,7 +513,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7371383863227300014}
   - component: {fileID: 3337849421544872890}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Fance_01
   m_TagString: Fance
   m_Icon: {fileID: 0}
@@ -573,9 +573,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -1604070495
+  m_SortingLayer: 1
+  m_SortingOrder: 1
   m_Sprite: {fileID: 1810276830, guid: b8ea98283abdd5c48831b8cb6a9f12db, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

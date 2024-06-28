@@ -96,7 +96,16 @@ namespace Unit.Enemy.Base
             }
             else
             {
+                healthView.value = health;
                 StartCoroutine(DamageAnimation());
+            }
+        }
+
+        private void OnCollisionEnter2D(Collision2D collision)
+        {
+            if(collision.gameObject.layer == 7)
+            {
+                ChangeState(EnemyState.Attack);
             }
         }
 
@@ -113,6 +122,8 @@ namespace Unit.Enemy.Base
             Attack,
             Death
         }
+
+
     }
 }
 
