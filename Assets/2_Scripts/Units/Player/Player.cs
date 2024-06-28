@@ -22,7 +22,8 @@ namespace Unit.Player
             {
                 if (Input.GetMouseButtonDown(0))
                 {
-                    Instantiate(bullet, shootPoint.position, transform.rotation);
+                    GameObject bulletInstance = Instantiate(bullet, shootPoint.position, transform.rotation);
+                    bulletInstance.transform.rotation = gunOnHand.transform.rotation; 
                     timeBtwShot = startTimeBtwShot;
                 }
             }
