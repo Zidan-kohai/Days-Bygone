@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Skeleton
   m_EditorClassIdentifier: 
   Health: 100
-  Speed: 3
+  Speed: 2
   Damage: 2
   Reward: 5

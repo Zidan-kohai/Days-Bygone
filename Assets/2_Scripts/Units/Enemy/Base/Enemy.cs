@@ -62,7 +62,7 @@ namespace Unit.Enemy.Base
         {
             rb.velocity = Vector3.zero;
             Debug.Log("Death");
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
 
         private void ChangeState(EnemyState newState)

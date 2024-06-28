@@ -242,7 +242,7 @@ MonoBehaviour:
   bullet: {fileID: 5710814736597581033, guid: c08e86d242b8a8043ba61d86642b8aab, type: 3}
   shootPoint: {fileID: 8784791139898133268}
   timeBtwShot: 0
-  startTimeBtwShot: 1
+  startTimeBtwShot: 0.4
 --- !u!1 &8982203413659490447
 GameObject:
   m_ObjectHideFlags: 0

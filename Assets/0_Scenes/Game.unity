@@ -564,7 +564,19 @@ MonoBehaviour:
   - time: 7
     enemies:
     - Type: 0
+      Count: 3
+    - Type: 1
       Count: 5
+  - time: 15
+    enemies:
+    - Type: 0
+      Count: 7
+    - Type: 1
+      Count: 3
+  - time: 25
+    enemies:
+    - Type: 0
+      Count: 10
     - Type: 1
       Count: 5
   skeletonPrefab: {fileID: 4741007364523354012, guid: 87967befd84bfcc4d9275289aebdbedc, type: 3}
