@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3204680993317784031}
   - component: {fileID: 8020655736300485440}
   - component: {fileID: 9078995294478108047}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -87,7 +87,7 @@ GameObject:
   - component: {fileID: 5747554469599972814}
   - component: {fileID: 7279496130909204675}
   - component: {fileID: 8532402761396884836}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -187,7 +187,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7902754884015732182}
   - component: {fileID: 1685963117513384715}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -275,7 +275,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4295656591143249789}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -316,7 +316,7 @@ GameObject:
   - component: {fileID: 7306535433075147525}
   - component: {fileID: 1459516456623557473}
   - component: {fileID: 5902821226009710194}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: Cyborg
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -437,14 +437,14 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3397207059732109474}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -512,7 +512,7 @@ GameObject:
   - component: {fileID: 4664449519036290296}
   - component: {fileID: 2461034079809479538}
   - component: {fileID: 4660151961559102205}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
