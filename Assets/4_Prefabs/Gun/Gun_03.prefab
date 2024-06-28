@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2268771038592144330}
-  - component: {fileID: -8620115918155702902}
   - component: {fileID: 3956922213836290087}
   m_Layer: 6
   m_Name: Gun_03
@@ -33,25 +32,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &-8620115918155702902
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1473871778232531009}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 129fa7845979156448c660d25a60c0e5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 15
-  lifeTime: 0.5
-  distance: 0.5
-  damage: 1
-  whatIsSolid:
-    serializedVersion: 2
-    m_Bits: 64
 --- !u!212 &3956922213836290087
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -90,8 +70,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1604070495
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: ffc78f38a184c05448136f02cb423778, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
