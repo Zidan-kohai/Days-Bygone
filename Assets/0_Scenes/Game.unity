@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 35582232}
   - component: {fileID: 35582234}
   - component: {fileID: 35582235}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: BG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -567,20 +567,27 @@ MonoBehaviour:
       Count: 3
     - Type: 1
       Count: 5
+    - Type: 2
+      Count: 1
   - time: 15
     enemies:
     - Type: 0
       Count: 7
     - Type: 1
       Count: 3
+    - Type: 2
+      Count: 4
   - time: 25
     enemies:
     - Type: 0
       Count: 10
     - Type: 1
       Count: 5
+    - Type: 2
+      Count: 5
   skeletonPrefab: {fileID: 4741007364523354012, guid: 87967befd84bfcc4d9275289aebdbedc, type: 3}
-  cyborgPrefab: {fileID: 8604351509011897016, guid: 2abd35fab0bacfb40b6feaf0a3f45ba8, type: 3}
+  halkPrefab: {fileID: 689021551087084832, guid: 2abd35fab0bacfb40b6feaf0a3f45ba8, type: 3}
+  hammermanPrefab: {fileID: 4795166405690696293, guid: 643025fa4dfa021469e75d91de8ab3f4, type: 3}
 --- !u!4 &1690731833 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4840031995278418682, guid: c476b3cf12a60504bb95e6d1e69afbce, type: 3}

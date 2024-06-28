@@ -3,6 +3,7 @@
     public enum EnemyType
     {
         Skeleton,
-        Cyborg
+        Halk,
+        Hammerman
     }
 }

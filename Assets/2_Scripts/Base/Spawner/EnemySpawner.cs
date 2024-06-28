@@ -11,17 +11,20 @@ namespace Base.Spawner
     {
         [SerializeField] private List<Wave> waves = new List<Wave>();
         [SerializeField] private Skeleton skeletonPrefab;
-        [SerializeField] private Cyborg cyborgPrefab;
+        [SerializeField] private Halk halkPrefab;
+        [SerializeField] private Hammerman hammermanPrefab;
 
         private ObjectPool<Skeleton> skeletonPool;
-        private ObjectPool<Cyborg> cyborgPool;
+        private ObjectPool<Halk> cyborgPool;
+        private ObjectPool<Hammerman> hammermanPool;
 
         private float minStartPos = -4, maxStartPos = 4;
 
         private void Start()
         {
-            skeletonPool = new ObjectPool<Skeleton>(skeletonPrefab, transform, 10, true);
-            cyborgPool = new ObjectPool<Cyborg>(cyborgPrefab, transform, 10, true);
+            skeletonPool = new ObjectPool<Skeleton>(skeletonPrefab, transform, 5, true);
+            cyborgPool = new ObjectPool<Halk>(halkPrefab, transform, 5, true);
+            hammermanPool = new ObjectPool<Hammerman>(hammermanPrefab, transform, 5, true);
 
             InitWave();
         }
@@ -47,8 +50,11 @@ namespace Base.Spawner
                         case EnemyType.Skeleton:
                             Init(skeletonPool.GetFree());
                             break;
-                        case EnemyType.Cyborg:
+                        case EnemyType.Halk:
                             Init(cyborgPool.GetFree());
+                            break;
+                        case EnemyType.Hammerman:
+                            Init(hammermanPool.GetFree());
                             break;
                     }
                 }
