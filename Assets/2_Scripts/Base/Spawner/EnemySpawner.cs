@@ -42,7 +42,7 @@ namespace Base.Spawner
 
             foreach (Wave.EnemyCount enemy in enemiesCount)
             {
-                for(int i = 0; i < enemiesCount.Count; i++)
+                for(int i = 0; i < enemy.Count; i++)
                 {
                     switch(enemy.Type)
                     {
