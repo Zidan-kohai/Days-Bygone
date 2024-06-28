@@ -550,41 +550,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 017344a929b26d5468ea3c07cab1d713, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waves:
-  - time: 1
-    enemies:
-    - Type: 0
-      Count: 1
-  - time: 3
-    enemies:
-    - Type: 0
-      Count: 2
-    - Type: 1
-      Count: 1
-  - time: 7
-    enemies:
-    - Type: 0
-      Count: 3
-    - Type: 1
-      Count: 5
-    - Type: 2
-      Count: 1
-  - time: 15
-    enemies:
-    - Type: 0
-      Count: 7
-    - Type: 1
-      Count: 3
-    - Type: 2
-      Count: 4
-  - time: 25
-    enemies:
-    - Type: 0
-      Count: 10
-    - Type: 1
-      Count: 5
-    - Type: 2
-      Count: 5
+  levels:
+  - {fileID: 11400000, guid: a054e3b37a49a7148b6a821ad4b208ee, type: 2}
+  - {fileID: 11400000, guid: 278f71cdbc4a4db409076a655f99c2cc, type: 2}
+  - {fileID: 11400000, guid: bbc27942812f58246b3f96926b927093, type: 2}
+  - {fileID: 11400000, guid: 32a4ac30adc4af049b9777d7d6091261, type: 2}
+  - {fileID: 11400000, guid: 0300780252433534997172cc05e47829, type: 2}
+  - {fileID: 11400000, guid: b061af42ab433664c9399c2dcb7a85ca, type: 2}
+  - {fileID: 11400000, guid: d83d6fd54ba221a40ac96b9e1f462ac9, type: 2}
+  - {fileID: 11400000, guid: ce3cc81d860a0674b9074eed7e579755, type: 2}
+  - {fileID: 11400000, guid: f21a92a94281c844785e2de2329207c6, type: 2}
   skeletonPrefab: {fileID: 4741007364523354012, guid: 87967befd84bfcc4d9275289aebdbedc, type: 3}
   halkPrefab: {fileID: 689021551087084832, guid: 2abd35fab0bacfb40b6feaf0a3f45ba8, type: 3}
   hammermanPrefab: {fileID: 4795166405690696293, guid: 643025fa4dfa021469e75d91de8ab3f4, type: 3}

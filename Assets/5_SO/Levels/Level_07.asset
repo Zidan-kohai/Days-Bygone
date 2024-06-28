@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 300667d958281954f8b01680fc0aef4e, type: 3}
+  m_Name: Level_07
+  m_EditorClassIdentifier: 
+  Waves:
+  - time: 3
+    enemies:
+    - Type: 0
+      Count: 1
+    - Type: 1
+      Count: 1
+  - time: 7
+    enemies:
+    - Type: 0
+      Count: 2
+    - Type: 1
+      Count: 1
+    - Type: 2
+      Count: 1
+  - time: 15
+    enemies:
+    - Type: 0
+      Count: 2
+    - Type: 1
+      Count: 3
+    - Type: 2
+      Count: 2
+  - time: 20
+    enemies:
+    - Type: 0
+      Count: 2
+    - Type: 1
+      Count: 3
+    - Type: 2
+      Count: 4
+  - time: 30
+    enemies:
+    - Type: 0
+      Count: 5
+    - Type: 1
+      Count: 3
+    - Type: 2
+      Count: 5

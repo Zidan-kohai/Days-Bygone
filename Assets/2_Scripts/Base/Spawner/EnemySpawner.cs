@@ -1,5 +1,4 @@
 using Internal.Codebase.ObjectPool;
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unit.Enemy.Base;
@@ -9,7 +8,7 @@ namespace Base.Spawner
 {
     public class EnemySpawner : MonoBehaviour
     {
-        [SerializeField] private List<Wave> waves = new List<Wave>();
+        [SerializeField] private List<Level> levels = new List<Level>();
         [SerializeField] private Skeleton skeletonPrefab;
         [SerializeField] private Halk halkPrefab;
         [SerializeField] private Hammerman hammermanPrefab;
@@ -31,7 +30,7 @@ namespace Base.Spawner
 
         private void InitWave()
         {
-            foreach (var wave in waves)
+            foreach (var wave in levels[0].Waves)
             {
                 StartCoroutine(Wave(wave.time, wave.enemies));
             }
@@ -66,21 +65,6 @@ namespace Base.Spawner
             float randomYPos = UnityEngine.Random.Range(minStartPos, maxStartPos);
             instance.transform.position = new Vector3(10, randomYPos, 0);
             instance.Init();
-        }
-    }
-        
-    [Serializable]
-    public class Wave
-    {
-        public float time;
-        public List<EnemyCount> enemies;
-
-
-        [Serializable]
-        public class EnemyCount
-        {
-            public EnemyType Type;
-            public int Count;
         }
     }
 }
