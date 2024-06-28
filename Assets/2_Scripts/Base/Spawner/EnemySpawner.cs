@@ -30,7 +30,7 @@ namespace Base.Spawner
 
         private void InitWave()
         {
-            foreach (var wave in levels[0].Waves)
+            foreach (var wave in levels[Data.Data.Instance.CurrentLevel].Waves)
             {
                 StartCoroutine(Wave(wave.time, wave.enemies));
             }
