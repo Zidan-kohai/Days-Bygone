@@ -38,6 +38,7 @@ public class Shop : MonoBehaviour
             if(i == currentWeaponIndex)
             {
                 weapons[i].gameObject.SetActive(true);
+                weapons[i].ChangeInfo();
             }
         }
     }
@@ -55,6 +56,7 @@ public class Shop : MonoBehaviour
             if (i == currentWeaponIndex)
             {
                 weapons[i].gameObject.SetActive(true);
+                weapons[i].ChangeInfo();
             }
         }
     }

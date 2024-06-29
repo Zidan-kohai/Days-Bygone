@@ -63,6 +63,7 @@ namespace Base.Data
                     weapon.Value.Damage += 5; 
                     weapon.Value.Speed -= 0.1f; 
                     weapon.Value.Speed = MathF.Round(weapon.Value.Speed, 1);
+                    weapon.Value.Speed = Mathf.Clamp(weapon.Value.Speed, 0.1f, 1000);
                     weapon.Value.UpdateTimes++; 
                     weapon.Value.UpgrateCost += 10;
 

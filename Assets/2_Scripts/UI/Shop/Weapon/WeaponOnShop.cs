@@ -31,7 +31,7 @@ public class WeaponOnShop : MonoBehaviour
         ChangeInfo();
     }
 
-    private void ChangeInfo()
+    public void ChangeInfo()
     {
         upgradeButton.onClick.RemoveAllListeners();
         equipButton.onClick.RemoveAllListeners();
