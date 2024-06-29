@@ -1,5 +1,6 @@
 using Unit.Enemy.Base;
 using UnityEngine;
+using static UnityEditor.Experimental.AssetDatabaseExperimental.AssetDatabaseCounters;
 
 public class Bullet : MonoBehaviour
 {
@@ -8,7 +9,7 @@ public class Bullet : MonoBehaviour
     [SerializeField] private float speed;
     [SerializeField] private float lifeTime;
     [SerializeField] private int damage;
-
+    private int counter = 0;
     private void Start()
     {
         Invoke("Destroy", lifeTime);
@@ -22,8 +23,11 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (counter > 0) return;
+
         if (collision.gameObject.TryGetComponent(out Enemy enemy))
         {
+            counter++;
             enemy.GetDamage(damage);
             Destroy(gameObject);
         }

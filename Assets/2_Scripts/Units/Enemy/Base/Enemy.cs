@@ -74,6 +74,8 @@ namespace Unit.Enemy.Base
             rb.velocity = Vector3.zero;
             Debug.Log("Death");
             gameObject.SetActive(false);
+            fence = null;
+            spriteRenderer.color = Color.white;
             onDeath?.Invoke(this);
         }
 
