@@ -38,6 +38,8 @@ namespace Base.Data
 
         public void OpenWeapon(int WeaponID)
         {
+            if (SaveData.openWeaponId.Contains(WeaponID)) return;
+
             SaveData.openWeaponId.Add(WeaponID);
             Save();
         }
