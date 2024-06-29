@@ -23,6 +23,7 @@ namespace Base.Data
             if(Instance != null)
             {
                 Destroy(gameObject);
+                return;
             }
 
             Instance = this;
