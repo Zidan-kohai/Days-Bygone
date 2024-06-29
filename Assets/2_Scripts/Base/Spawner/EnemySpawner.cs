@@ -1,4 +1,5 @@
 using Internal.Codebase.ObjectPool;
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using Unit.Enemy.Base;
@@ -8,6 +9,7 @@ namespace Base.Spawner
 {
     public class EnemySpawner : MonoBehaviour
     {
+        [SerializeField] private GameWindowController gameWindowController;
         [SerializeField] private List<Level> levels = new List<Level>();
         [SerializeField] private Skeleton skeletonPrefab;
         [SerializeField] private Halk halkPrefab;
@@ -16,6 +18,9 @@ namespace Base.Spawner
         private ObjectPool<Skeleton> skeletonPool;
         private ObjectPool<Halk> cyborgPool;
         private ObjectPool<Hammerman> hammermanPool;
+
+        [SerializeField] private List<Enemy> enemies = new List<Enemy>();
+        [SerializeField] private bool isLastWave = false;
 
         private float minStartPos = -4, maxStartPos = 4;
 
@@ -30,21 +35,26 @@ namespace Base.Spawner
 
         private void InitWave()
         {
-            foreach (var wave in levels[Data.Data.Instance.CurrentLevel].Waves)
+            int currentLevel = Data.Data.Instance.CurrentLevel;
+            int waveCount = levels[currentLevel].Waves.Count;
+
+            for (int i = 0; i < waveCount; i++)
             {
-                StartCoroutine(Wave(wave.time, wave.enemies));
+                Wave wave = levels[currentLevel].Waves[i];
+
+                StartCoroutine(Wave(wave.time, wave.enemies, i == waveCount - 1));
             }
         }
 
-        private IEnumerator Wave(float time, List<Wave.EnemyCount> enemiesCount)
+        private IEnumerator Wave(float time, List<Wave.EnemyCount> enemiesCount, bool isLastWave)
         {
             yield return new WaitForSeconds(time);
 
             foreach (Wave.EnemyCount enemy in enemiesCount)
             {
-                for(int i = 0; i < enemy.Count; i++)
+                for (int i = 0; i < enemy.Count; i++)
                 {
-                    switch(enemy.Type)
+                    switch (enemy.Type)
                     {
                         case EnemyType.Skeleton:
                             Init(skeletonPool.GetFree());
@@ -58,13 +68,28 @@ namespace Base.Spawner
                     }
                 }
             }
+
+            this.isLastWave = isLastWave;
         }
 
         private void Init<T>(T instance) where T : Enemy
         {
-            float randomYPos = UnityEngine.Random.Range(minStartPos, maxStartPos);
+            enemies.Add(instance);
+            float randomYPos = Random.Range(minStartPos, maxStartPos);
             instance.transform.position = new Vector3(10, randomYPos, 0);
-            instance.Init();
+            instance.Init(CheckWin);
+        }
+
+        public void CheckWin(Enemy enemy)
+        {
+            enemies.Remove(enemy);
+
+            if (!isLastWave) return;
+
+            if (enemies.Count == 0)
+            {
+                gameWindowController.Win();
+            }
         }
     }
 }

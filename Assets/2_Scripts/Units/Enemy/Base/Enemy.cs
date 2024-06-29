@@ -14,12 +14,13 @@ namespace Unit.Enemy.Base
         [SerializeField] protected Animator animator;
         [SerializeField] protected SpriteRenderer spriteRenderer;
         protected EnemyState state;
+        private Action<Enemy> onDeath;
         protected float health;
         protected float speed;
         protected float damage;
         protected float reward;
 
-        public void Init()
+        public void Init(Action<Enemy> onDeath)
         {
             health = config.Health;
             speed = config.Speed;
@@ -28,6 +29,10 @@ namespace Unit.Enemy.Base
 
             healthView.maxValue = config.Health;
             healthView.value = config.Health;
+
+            this.onDeath += onDeath;
+
+            ChangeState(EnemyState.Walk, true);
         }
 
         private void Update()
@@ -63,11 +68,15 @@ namespace Unit.Enemy.Base
             rb.velocity = Vector3.zero;
             Debug.Log("Death");
             gameObject.SetActive(false);
+            onDeath?.Invoke(this);
         }
 
-        private void ChangeState(EnemyState newState)
+        private void ChangeState(EnemyState newState, bool force = false)
         {
-            if (newState == state || state == EnemyState.Death) return;
+            if (!force)
+            {
+                if (newState == state || state == EnemyState.Death) return;
+            }
 
             state = newState;
 
