@@ -15,6 +15,7 @@ namespace Unit.Enemy.Base
         [SerializeField] protected SpriteRenderer spriteRenderer;
         protected EnemyState state;
         private Action<Enemy> onDeath;
+        protected Fence fence;
         protected float health;
         protected float speed;
         protected float damage;
@@ -61,6 +62,11 @@ namespace Unit.Enemy.Base
         {
             rb.velocity = Vector3.zero;
             animator.SetTrigger("Attack");
+        }
+
+        private void Attack()
+        {
+            fence.GetDamage(damage);
         }
 
         protected void OnDeath()
@@ -112,8 +118,9 @@ namespace Unit.Enemy.Base
 
         private void OnCollisionEnter2D(Collision2D collision)
         {
-            if(collision.gameObject.layer == 7)
+            if(collision.gameObject.TryGetComponent(out Fence fence))
             {
+                this.fence = fence;
                 ChangeState(EnemyState.Attack);
             }
         }

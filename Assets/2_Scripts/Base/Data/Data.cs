@@ -26,11 +26,13 @@ namespace Base.Data
             Load();
         }
 
-        public int GetOpenedLevel => SaveData.openLevel;
+        public int GetOpenedLevel => SaveData.OpenLevel;
+
+        public float GetFenceHealth => SaveData.FenceHealth;
 
         public void SetOpenLevel()
         {
-            SaveData.openLevel++;
+            SaveData.OpenLevel++;
             Save();
         }
 
@@ -57,8 +59,9 @@ namespace Base.Data
     [Serializable]
     public class SaveData
     {
-        public int openLevel = 1;
+        public int OpenLevel = 1;
         public List<int> openWeaponId = new List<int>() { 0 };
         public int money = 0;
+        public float FenceHealth = 100;
     }
 }
