@@ -78,7 +78,13 @@ namespace Base.Data
             SaveData.OpenWeaponId.Add(WeaponID);
             Save();
         }
-        
+
+        public void ChangeMoney(int money)
+        {
+            SaveData.Money += money;
+            Save();
+        }
+
         private void Save()
         {
             string data = JsonUtility.ToJson(SaveData);

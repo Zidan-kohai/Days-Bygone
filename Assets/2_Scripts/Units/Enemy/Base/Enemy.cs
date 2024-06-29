@@ -19,7 +19,7 @@ namespace Unit.Enemy.Base
         protected float health;
         protected float speed;
         protected float damage;
-        protected float reward;
+        protected int reward;
 
         public void Init(Action<Enemy> onDeath)
         {
@@ -77,6 +77,7 @@ namespace Unit.Enemy.Base
             fence = null;
             spriteRenderer.color = Color.white;
             onDeath?.Invoke(this);
+            Wallet.Instance.AddMoney(reward);
         }
 
         private void ChangeState(EnemyState newState, bool force = false)

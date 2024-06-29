@@ -57,6 +57,8 @@ public class WeaponOnShop : MonoBehaviour
             {
                 upgradeButton.onClick.AddListener(() =>
                 {
+                    if (Data.Instance.SaveData.Money < data.UpgrateCost) return;
+
                     Data.Instance.UpgrateWeapon(weaponId);
                     ChangeInfo();
                 });

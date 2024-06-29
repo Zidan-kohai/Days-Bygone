@@ -8,7 +8,7 @@ namespace Unit.Enemy.Base
         public float Health;
         public float Speed;
         public float Damage;
-        public float Reward;
+        public int Reward;
 
     }
 }
