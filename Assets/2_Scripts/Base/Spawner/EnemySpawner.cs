@@ -35,7 +35,7 @@ namespace Base.Spawner
 
         private void InitWave()
         {
-            int currentLevel = Data.Data.Instance.CurrentLevel;
+            int currentLevel = Data.Data.Instance.CurrentLevel - 1;
             int waveCount = levels[currentLevel].Waves.Count;
 
             for (int i = 0; i < waveCount; i++)
