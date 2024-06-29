@@ -186,7 +186,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   offSet: 270
   gunOnHand: {fileID: 5268118710893643310}
-  bullet: {fileID: 5710814736597581033, guid: c08e86d242b8a8043ba61d86642b8aab, type: 3}
+  bullets:
+  - {fileID: 1833255147318955555, guid: c08e86d242b8a8043ba61d86642b8aab, type: 3}
+  - {fileID: 1146904689605181561, guid: babf5a6a82cbee9459e6205ffb4cf8e2, type: 3}
+  - {fileID: -8489257974952094589, guid: 40a612dd3bd912547ae6ff3dcfcaef54, type: 3}
+  - {fileID: 4097830767310751440, guid: 6cbc6ef10dedd964ab91becd8dd513cc, type: 3}
+  currentBullet: {fileID: 0}
   shootPoint: {fileID: 8784791139898133268}
   timeBtwShot: 0
   startTimeBtwShot: 0.4

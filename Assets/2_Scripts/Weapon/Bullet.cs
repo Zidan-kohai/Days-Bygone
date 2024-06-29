@@ -1,6 +1,6 @@
+using Base.Data;
 using Unit.Enemy.Base;
 using UnityEngine;
-using static UnityEditor.Experimental.AssetDatabaseExperimental.AssetDatabaseCounters;
 
 public class Bullet : MonoBehaviour
 {
@@ -10,10 +10,11 @@ public class Bullet : MonoBehaviour
     [SerializeField] private float lifeTime;
     [SerializeField] private int damage;
     private int counter = 0;
-    private void Start()
+    public void Init(int damage)
     {
         Invoke("Destroy", lifeTime);
         rb.velocity = transform.up * speed;
+        this.damage = damage;
     }
 
     public void Destroy()

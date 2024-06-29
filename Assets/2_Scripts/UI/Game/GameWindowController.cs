@@ -27,6 +27,7 @@ public class GameWindowController : MonoBehaviour
 
     public void Win()
     {
+        TryOpenNewLevel();
         Time.timeScale = 0.0f;
         WinPanel.SetActive(true);
     }
@@ -49,13 +50,16 @@ public class GameWindowController : MonoBehaviour
 
     public void NextLevel()
     {
-        if(Data.Instance.GetOpenedLevel == Data.Instance.CurrentLevel)
+        SceneManager.LoadScene(1);
+    }
+
+    public void TryOpenNewLevel()
+    {
+        if (Data.Instance.GetOpenedLevel == Data.Instance.CurrentLevel)
         {
             Data.Instance.SetOpenLevel();
         }
 
         Data.Instance.CurrentLevel++;
-
-        SceneManager.LoadScene(1);
     }
 }

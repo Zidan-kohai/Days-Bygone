@@ -1,3 +1,5 @@
+using Base.Data;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace Unit.Player
@@ -7,10 +9,20 @@ namespace Unit.Player
         [Header("Gun")]
         [SerializeField] private float offSet;
         [SerializeField] private GameObject gunOnHand;
-        [SerializeField] private GameObject bullet;
+        [SerializeField] private List<Bullet> bullets;
+        [SerializeField] private Bullet currentBullet;
         [SerializeField] private Transform shootPoint;
         [SerializeField] private float timeBtwShot;
         [SerializeField] private float startTimeBtwShot;
+
+        private void Start()
+        {
+            int weaponID = Data.Instance.CurrentWeaponId;
+
+            currentBullet = bullets[weaponID];
+
+            startTimeBtwShot = Data.Instance.GetWeaponData(weaponID).Speed;
+        }
 
         private void Update()
         {
@@ -22,9 +34,12 @@ namespace Unit.Player
             {
                 if (Input.GetMouseButtonDown(0))
                 {
-                    GameObject bulletInstance = Instantiate(bullet, shootPoint.position, transform.rotation);
+                    Bullet bulletInstance = Instantiate(currentBullet, shootPoint.position, transform.rotation);
                     bulletInstance.transform.rotation = gunOnHand.transform.rotation; 
                     timeBtwShot = startTimeBtwShot;
+
+                    int damage = Data.Instance.GetWeaponData(Data.Instance.CurrentWeaponId).Damage;
+                    bulletInstance.Init(damage);
                 }
             }
             else

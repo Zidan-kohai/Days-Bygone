@@ -33,21 +33,25 @@ public class DropDawnWeapon : MonoBehaviour
             if (!Data.Instance.SaveData.OpenWeaponId.Contains(0) && CheckDropDawn(gun_00Chance))
             {
                 SpawnDropDawnGun(gun_00);
+                yield return new WaitForSeconds(5);
             }
 
             if (!Data.Instance.SaveData.OpenWeaponId.Contains(1) && CheckDropDawn(gun_01Chance))
             {
                 SpawnDropDawnGun(gun_01);
+                yield return new WaitForSeconds(5);
             }
 
             if (!Data.Instance.SaveData.OpenWeaponId.Contains(2) && CheckDropDawn(gun_02Chance))
             {
                 SpawnDropDawnGun(gun_02);
+                yield return new WaitForSeconds(5);
             }
 
             if (!Data.Instance.SaveData.OpenWeaponId.Contains(3) && CheckDropDawn(gun_03Chance))
             {
                 SpawnDropDawnGun(gun_03);
+                yield return new WaitForSeconds(5);
             }
         }
     }
