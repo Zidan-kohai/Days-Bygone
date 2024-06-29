@@ -22,22 +22,22 @@ public class DropDawnWeapon : MonoBehaviour
 
     public void Update()
     {
-        if (!Data.Instance.SaveData.openWeaponId.Contains(0) && CheckDropDawn(gun_00Chance))
+        if (!Data.Instance.SaveData.OpenWeaponId.Contains(0) && CheckDropDawn(gun_00Chance))
         {
             SpawnDropDawnGun(gun_00);
         }
 
-        if (!Data.Instance.SaveData.openWeaponId.Contains(1) && CheckDropDawn(gun_01Chance))
+        if (!Data.Instance.SaveData.OpenWeaponId.Contains(1) && CheckDropDawn(gun_01Chance))
         {
             SpawnDropDawnGun(gun_01);
         }
 
-        if (!Data.Instance.SaveData.openWeaponId.Contains(2) && CheckDropDawn(gun_02Chance))
+        if (!Data.Instance.SaveData.OpenWeaponId.Contains(2) && CheckDropDawn(gun_02Chance))
         {
             SpawnDropDawnGun(gun_02);
         }
 
-        if (!Data.Instance.SaveData.openWeaponId.Contains(3) && CheckDropDawn(gun_03Chance))
+        if (!Data.Instance.SaveData.OpenWeaponId.Contains(3) && CheckDropDawn(gun_03Chance))
         {
             SpawnDropDawnGun(gun_03);
         }
