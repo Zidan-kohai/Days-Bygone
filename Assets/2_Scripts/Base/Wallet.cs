@@ -13,6 +13,7 @@ public class Wallet : MonoBehaviour
         if(Instance != null)
         {
             Destroy(gameObject);
+            return;
         }
 
         Instance = this;
