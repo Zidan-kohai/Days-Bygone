@@ -59,6 +59,7 @@ public class WeaponOnShop : MonoBehaviour
                 {
                     if (Data.Instance.SaveData.Money < data.UpgrateCost) return;
 
+                    Wallet.Instance.SubstructMoney(data.UpgrateCost);
                     Data.Instance.UpgrateWeapon(weaponId);
                     ChangeInfo();
                 });

@@ -121,7 +121,7 @@ namespace Base.Data
     {
         public int Damage;
         public float Speed;
-        public float UpgrateCost;
+        public int UpgrateCost;
         public int UpdateTimes;
         public int MaxUpdateTimes;
     }
