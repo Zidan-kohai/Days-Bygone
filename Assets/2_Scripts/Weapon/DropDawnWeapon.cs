@@ -1,5 +1,6 @@
 using Base.Data;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -18,28 +19,36 @@ public class DropDawnWeapon : MonoBehaviour
     public int gun_02Chance = 300;
     public int gun_03Chance = 400;
 
-
-
-    public void Update()
+    private void Start()
     {
-        if (!Data.Instance.SaveData.OpenWeaponId.Contains(0) && CheckDropDawn(gun_00Chance))
-        {
-            SpawnDropDawnGun(gun_00);
-        }
+        StartCoroutine(Drop());
+    }
 
-        if (!Data.Instance.SaveData.OpenWeaponId.Contains(1) && CheckDropDawn(gun_01Chance))
+    private IEnumerator Drop()
+    {
+        while(true)
         {
-            SpawnDropDawnGun(gun_01);
-        }
+            yield return new WaitForSeconds(1);
 
-        if (!Data.Instance.SaveData.OpenWeaponId.Contains(2) && CheckDropDawn(gun_02Chance))
-        {
-            SpawnDropDawnGun(gun_02);
-        }
+            if (!Data.Instance.SaveData.OpenWeaponId.Contains(0) && CheckDropDawn(gun_00Chance))
+            {
+                SpawnDropDawnGun(gun_00);
+            }
 
-        if (!Data.Instance.SaveData.OpenWeaponId.Contains(3) && CheckDropDawn(gun_03Chance))
-        {
-            SpawnDropDawnGun(gun_03);
+            if (!Data.Instance.SaveData.OpenWeaponId.Contains(1) && CheckDropDawn(gun_01Chance))
+            {
+                SpawnDropDawnGun(gun_01);
+            }
+
+            if (!Data.Instance.SaveData.OpenWeaponId.Contains(2) && CheckDropDawn(gun_02Chance))
+            {
+                SpawnDropDawnGun(gun_02);
+            }
+
+            if (!Data.Instance.SaveData.OpenWeaponId.Contains(3) && CheckDropDawn(gun_03Chance))
+            {
+                SpawnDropDawnGun(gun_03);
+            }
         }
     }
 
