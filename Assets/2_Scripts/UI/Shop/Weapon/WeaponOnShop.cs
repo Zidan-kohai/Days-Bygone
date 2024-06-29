@@ -11,6 +11,8 @@ public class WeaponOnShop : MonoBehaviour
     [SerializeField] private TextMeshProUGUI damageView;
     [SerializeField] private Button upgradeButton;
     [SerializeField] private TextMeshProUGUI upgradeCostView;
+    [SerializeField] private TextMeshProUGUI upgradeTextView;
+    [SerializeField] private Image goldIcon;
     [SerializeField] private Button equipButton;
     [SerializeField] private TextMeshProUGUI equipText;
     [SerializeField] private WeaponData data;
@@ -43,11 +45,23 @@ public class WeaponOnShop : MonoBehaviour
         {
             closePanel.SetActive(false);
             upgradeButton.interactable = true;
-            upgradeButton.onClick.AddListener(() =>
+
+            if (data.UpdateTimes >= data.MaxUpdateTimes)
             {
-                Data.Instance.UpgrateWeapon(weaponId);
-                ChangeInfo();
-            });
+                upgradeTextView.text = "Max";
+                upgradeCostView.gameObject.SetActive(false);
+                goldIcon.gameObject.SetActive(false);
+                upgradeButton.interactable = false;
+            }
+            else
+            {
+                upgradeButton.onClick.AddListener(() =>
+                {
+                    Data.Instance.UpgrateWeapon(weaponId);
+                    ChangeInfo();
+                });
+            }
+            
 
             equipButton.interactable = true;
             equipText.text = "Equip";

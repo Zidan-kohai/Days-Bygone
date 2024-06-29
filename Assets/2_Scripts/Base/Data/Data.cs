@@ -57,12 +57,15 @@ namespace Base.Data
         {
             foreach(var weapon in SaveData.Weapons)
             {
-                if(weapon.key == weaponID)
+                if(weapon.key == weaponID && weapon.Value.UpdateTimes < weapon.Value.MaxUpdateTimes)
                 {
                     weapon.Value.Damage += 5; 
                     weapon.Value.Speed -= 0.1f; 
                     weapon.Value.UpdateTimes++; 
-                    weapon.Value.UpgrateCost += 10; 
+                    weapon.Value.UpgrateCost += 10;
+
+                    bool isMax = weapon.Value.UpdateTimes == weapon.Value.MaxUpdateTimes;
+                    Save();
                 }
             }
         }

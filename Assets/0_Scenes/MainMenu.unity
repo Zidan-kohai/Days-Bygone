@@ -661,6 +661,8 @@ MonoBehaviour:
   damageView: {fileID: 2023928053}
   upgradeButton: {fileID: 487200413}
   upgradeCostView: {fileID: 968248627}
+  upgradeTextView: {fileID: 416876887}
+  goldIcon: {fileID: 831809573}
   equipButton: {fileID: 339878545}
   equipText: {fileID: 576746977}
   data:
@@ -2748,6 +2750,8 @@ MonoBehaviour:
   damageView: {fileID: 1931748218}
   upgradeButton: {fileID: 1140380863}
   upgradeCostView: {fileID: 809443317}
+  upgradeTextView: {fileID: 1992486606}
+  goldIcon: {fileID: 893640060}
   equipButton: {fileID: 215427860}
   equipText: {fileID: 30993526}
   data:
@@ -3354,6 +3358,8 @@ MonoBehaviour:
   damageView: {fileID: 1423608069}
   upgradeButton: {fileID: 1832522612}
   upgradeCostView: {fileID: 556970593}
+  upgradeTextView: {fileID: 742328696}
+  goldIcon: {fileID: 1934729407}
   equipButton: {fileID: 824056666}
   equipText: {fileID: 1694318514}
   data:
@@ -8316,6 +8322,8 @@ MonoBehaviour:
   damageView: {fileID: 78446974}
   upgradeButton: {fileID: 118722163}
   upgradeCostView: {fileID: 976927768}
+  upgradeTextView: {fileID: 1839233767}
+  goldIcon: {fileID: 1758210906}
   equipButton: {fileID: 476428806}
   equipText: {fileID: 364532798}
   data:
