@@ -33,7 +33,7 @@ namespace Base.Data
 
         public int GetOpenedLevel => SaveData.OpenLevel;
 
-        public float GetFenceHealth => SaveData.FenceHealth;
+        public float GetFenceHealth => SaveData.Fence.FenceHealth;
 
         public void SetOpenLevel()
         {
@@ -87,6 +87,13 @@ namespace Base.Data
             Save();
         }
 
+        public void UpgrateFence()
+        {
+            SaveData.Fence.FenceHealth += 5;
+            SaveData.Fence.FenceUprgadeCost += 10;
+
+            Save();
+        }
         private void Save()
         {
             string data = JsonUtility.ToJson(SaveData);
@@ -107,7 +114,8 @@ namespace Base.Data
         public int OpenLevel = 1;
         public List<int> OpenWeaponId = new List<int>() { 0 };
         public int Money = 0;
-        public float FenceHealth = 100;
+        public FenceData Fence;
+
 
         public MyDictionary<int, WeaponData>[] Weapons = new MyDictionary<int, WeaponData>[]
         {
@@ -116,6 +124,13 @@ namespace Base.Data
             new MyDictionary<int, WeaponData> (2, new WeaponData(){ Damage = 100, Speed = 1, UpgrateCost = 10, MaxUpdateTimes = 5 } ),
             new MyDictionary<int, WeaponData> (3, new WeaponData(){ Damage = 150, Speed = 0.5f, UpgrateCost = 10, MaxUpdateTimes = 5 } ),
         };
+
+        [Serializable]
+        public class FenceData
+        {
+            public float FenceHealth = 100;
+            public int FenceUprgadeCost = 10;
+        }
     }
 
     [Serializable]

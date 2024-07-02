@@ -37,7 +37,7 @@ TextureImporter:
     filterMode: 0
     aniso: 1
     mipBias: 0
-    wrapU: 0
+    wrapU: 2
     wrapV: 1
     wrapW: 2
   nPOTScale: 0
