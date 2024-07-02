@@ -154,7 +154,7 @@ namespace Randoms.DailyReward.Internals
         }
     }
 
-    
+
     // Custom Store for remembering state
     internal class DailyRewardStore
     {

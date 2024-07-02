@@ -77,24 +77,25 @@ namespace Randoms.DailyReward
 
         #region Logic
 
+        [SerializeField] private List<DailyRewardBtn> dailyRewardBtns;
         public static DailyRewardManager Instance { get; private set; }
         private bool isInitialized = false;
         private bool canRefreshUI  = true;
         private DailyRewardBtn activeBtn;
-        private static List<DailyRewardBtn> dailyRewardBtns;
         private Action<DailyRewardBtn> _applyUiStyling;
 
         void Awake ()
         {
             if (Instance) Destroy (this);
             Instance = this;
-            dailyRewardBtns = new List<DailyRewardBtn>();
+            //dailyRewardBtns = new List<DailyRewardBtn>();
             _tickListeners = new List<Action<string>>();
             
-            foreach (var btn in Resources.FindObjectsOfTypeAll<DailyRewardBtn>())
-                dailyRewardBtns.Add (btn);
+            //foreach (var btn in Resources.FindObjectsOfTypeAll<DailyRewardBtn>())
+            //    dailyRewardBtns.Add (btn);
 
-            Init ();                
+            Init ();
+            isInitialized = true;
         }
         
         void Start()
@@ -151,6 +152,7 @@ namespace Randoms.DailyReward
                 {
                     case DailyRewardStatus.CLAIMED:  btn.OnClaimedState?.Invoke (); break;
                     case DailyRewardStatus.UNCLAIMED_UNAVAILABLE:  btn.OnClaimUnAvailableState?.Invoke();  break;
+                    case DailyRewardStatus.UNCLAIMED_AVAILABLE: if(!canClaim) btn.OnClaimUnAvailableState?.Invoke(); break;
                 }
                 
                 // ative btn

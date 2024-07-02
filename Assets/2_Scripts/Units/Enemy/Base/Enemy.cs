@@ -47,7 +47,6 @@ namespace Unit.Enemy.Base
                     OnAttack();
                     break;
                 case EnemyState.Death:
-                    OnDeath();
                     break;
             }
         }
@@ -98,6 +97,7 @@ namespace Unit.Enemy.Base
                     break;
 
                 case EnemyState.Death:
+                    OnDeath();
                     break;
             }
         }

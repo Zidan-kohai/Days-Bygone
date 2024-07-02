@@ -1,4 +1,5 @@
 using Base.Data;
+using Randoms.DailyReward;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -22,6 +23,7 @@ public class Shop : MonoBehaviour
 
         rightButton.onClick.AddListener(RightButtonClick);
         leftButton.onClick.AddListener(LeftButtonClick);
+
     }
 
     public void AddMoney(int money)
