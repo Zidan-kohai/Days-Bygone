@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1544787467968636420
 RectTransform:
   m_ObjectHideFlags: 0
@@ -634,7 +634,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   takenPanel: {fileID: 1676772771148090552}
   cantTakePanel: {fileID: 3942370168829320049}
-  btn: {fileID: 0}
+  btn: {fileID: 6847466457848090564}
   day: 1
   OnClaimState:
     m_PersistentCalls:

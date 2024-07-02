@@ -21,7 +21,7 @@ namespace Unit.Player
 
             currentBullet = bullets[weaponID];
 
-            startTimeBtwShot = Data.Instance.GetWeaponData(weaponID).Speed;
+            startTimeBtwShot = Data.Instance.GetWeaponData(weaponID).SpawnSpeed;
         }
 
         private void Update()
@@ -39,7 +39,8 @@ namespace Unit.Player
                     timeBtwShot = startTimeBtwShot;
 
                     int damage = Data.Instance.GetWeaponData(Data.Instance.CurrentWeaponId).Damage;
-                    bulletInstance.Init(damage);
+                    float bulletSpeed = Data.Instance.GetWeaponData(Data.Instance.CurrentWeaponId).BulletSpeed;
+                    bulletInstance.Init(damage, bulletSpeed);
                 }
             }
             else

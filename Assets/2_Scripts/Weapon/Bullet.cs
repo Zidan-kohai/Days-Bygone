@@ -6,14 +6,13 @@ public class Bullet : MonoBehaviour
 {
     [Header("Bullet")]
     [SerializeField] private Rigidbody2D rb;
-    [SerializeField] private float speed;
     [SerializeField] private float lifeTime;
     [SerializeField] private int damage;
     private int counter = 0;
-    public void Init(int damage)
+    public void Init(int damage, float bulletSpeed)
     {
         Invoke("Destroy", lifeTime);
-        rb.velocity = transform.up * speed;
+        rb.velocity = transform.up * bulletSpeed;
         this.damage = damage;
     }
 

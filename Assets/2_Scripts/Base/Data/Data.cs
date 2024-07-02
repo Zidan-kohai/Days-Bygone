@@ -61,9 +61,10 @@ namespace Base.Data
                 if(weapon.key == weaponID && weapon.Value.UpdateTimes < weapon.Value.MaxUpdateTimes)
                 {
                     weapon.Value.Damage += 5; 
-                    weapon.Value.Speed -= 0.1f; 
-                    weapon.Value.Speed = MathF.Round(weapon.Value.Speed, 1);
-                    weapon.Value.Speed = Mathf.Clamp(weapon.Value.Speed, 0.1f, 1000);
+                    weapon.Value.SpawnSpeed -= 0.1f; 
+                    weapon.Value.SpawnSpeed = MathF.Round(weapon.Value.SpawnSpeed, 1);
+                    weapon.Value.SpawnSpeed = Mathf.Clamp(weapon.Value.SpawnSpeed, 0.1f, 1000);
+                    weapon.Value.BulletSpeed += 0.3f; 
                     weapon.Value.UpdateTimes++; 
                     weapon.Value.UpgrateCost += 10;
 
@@ -94,6 +95,7 @@ namespace Base.Data
 
             Save();
         }
+
         private void Save()
         {
             string data = JsonUtility.ToJson(SaveData);
@@ -119,10 +121,10 @@ namespace Base.Data
 
         public MyDictionary<int, WeaponData>[] Weapons = new MyDictionary<int, WeaponData>[]
         {
-            new MyDictionary<int, WeaponData> (0, new WeaponData(){ Damage = 50, Speed = 2, UpgrateCost = 10, MaxUpdateTimes = 5 } ),
-            new MyDictionary<int, WeaponData> (1, new WeaponData(){ Damage = 70, Speed = 1.5f, UpgrateCost = 10, MaxUpdateTimes = 5 } ),
-            new MyDictionary<int, WeaponData> (2, new WeaponData(){ Damage = 100, Speed = 1, UpgrateCost = 10, MaxUpdateTimes = 5 } ),
-            new MyDictionary<int, WeaponData> (3, new WeaponData(){ Damage = 150, Speed = 0.5f, UpgrateCost = 10, MaxUpdateTimes = 5 } ),
+            new MyDictionary<int, WeaponData> (0, new WeaponData(){ Damage = 50, SpawnSpeed = 2, BulletSpeed = 5, UpgrateCost = 10, MaxUpdateTimes = 5 } ),
+            new MyDictionary<int, WeaponData> (1, new WeaponData(){ Damage = 70, SpawnSpeed = 1.5f, BulletSpeed = 6, UpgrateCost = 10, MaxUpdateTimes = 5 } ),
+            new MyDictionary<int, WeaponData> (2, new WeaponData(){ Damage = 100, SpawnSpeed = 1, BulletSpeed = 7, UpgrateCost = 10, MaxUpdateTimes = 5 } ),
+            new MyDictionary<int, WeaponData> (3, new WeaponData(){ Damage = 150, SpawnSpeed = 0.5f, BulletSpeed = 8, UpgrateCost = 10, MaxUpdateTimes = 5 } ),
         };
 
         [Serializable]
@@ -137,7 +139,8 @@ namespace Base.Data
     public class WeaponData
     {
         public int Damage;
-        public float Speed;
+        public float SpawnSpeed;
+        public float BulletSpeed;
         public int UpgrateCost;
         public int UpdateTimes;
         public int MaxUpdateTimes;

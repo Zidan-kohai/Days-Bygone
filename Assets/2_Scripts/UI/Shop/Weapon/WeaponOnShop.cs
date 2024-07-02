@@ -7,7 +7,8 @@ using UnityEngine.UI;
 public class WeaponOnShop : MonoBehaviour
 {
     [SerializeField] private GameObject closePanel;
-    [SerializeField] private TextMeshProUGUI speedView;
+    [SerializeField] private TextMeshProUGUI reloadSpeedView;
+    [SerializeField] private TextMeshProUGUI bulletSpeedView;
     [SerializeField] private TextMeshProUGUI damageView;
     [SerializeField] private Button upgradeButton;
     [SerializeField] private TextMeshProUGUI upgradeCostView;
@@ -36,9 +37,10 @@ public class WeaponOnShop : MonoBehaviour
         upgradeButton.onClick.RemoveAllListeners();
         equipButton.onClick.RemoveAllListeners();
 
-        speedView.text = data.Speed.ToString();
-        damageView.text = data.Damage.ToString();
+        bulletSpeedView.text = data.BulletSpeed.ToString();
+        reloadSpeedView.text = data.SpawnSpeed.ToString();
         upgradeCostView.text = data.UpgrateCost.ToString();
+        damageView.text = data.Damage.ToString();
 
 
         if(!isClose)
