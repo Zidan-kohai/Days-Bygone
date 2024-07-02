@@ -3105,6 +3105,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: d83d6fd54ba221a40ac96b9e1f462ac9, type: 2}
   - {fileID: 11400000, guid: ce3cc81d860a0674b9074eed7e579755, type: 2}
   - {fileID: 11400000, guid: f21a92a94281c844785e2de2329207c6, type: 2}
+  - {fileID: 11400000, guid: 53d15f826b3d83b42b6364fbec4b1dca, type: 2}
   skeletonPrefab: {fileID: 4741007364523354012, guid: 87967befd84bfcc4d9275289aebdbedc, type: 3}
   halkPrefab: {fileID: 689021551087084832, guid: 2abd35fab0bacfb40b6feaf0a3f45ba8, type: 3}
   hammermanPrefab: {fileID: 4795166405690696293, guid: 643025fa4dfa021469e75d91de8ab3f4, type: 3}

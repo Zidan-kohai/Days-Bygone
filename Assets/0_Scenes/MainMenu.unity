@@ -4878,7 +4878,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 700, y: 600}
+  m_SizeDelta: {x: 900, y: 600}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &606258257
 MonoBehaviour:
@@ -7991,7 +7991,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1189466545
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8391,7 +8391,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1254640379
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11568,8 +11568,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: d83d6fd54ba221a40ac96b9e1f462ac9, type: 2}
   - {fileID: 11400000, guid: ce3cc81d860a0674b9074eed7e579755, type: 2}
   - {fileID: 11400000, guid: f21a92a94281c844785e2de2329207c6, type: 2}
+  - {fileID: 11400000, guid: 53d15f826b3d83b42b6364fbec4b1dca, type: 2}
   mapItems: []
-  MaxMapItemOnOneTime: 8
+  MaxMapItemOnOneTime: 10
   currentLastMapItemIndex: 0
   rightButton: {fileID: 1189466546}
   leftButton: {fileID: 1254640380}
