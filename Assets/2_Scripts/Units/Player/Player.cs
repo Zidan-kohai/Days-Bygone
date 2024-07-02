@@ -32,7 +32,7 @@ namespace Unit.Player
 
             if (timeBtwShot <= 0)
             {
-                if (Input.GetMouseButtonDown(0))
+                if (Input.GetMouseButton(0))
                 {
                     Bullet bulletInstance = Instantiate(currentBullet, shootPoint.position, transform.rotation);
                     bulletInstance.transform.rotation = gunOnHand.transform.rotation; 
