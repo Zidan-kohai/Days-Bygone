@@ -8,6 +8,8 @@ public class GameWindowController : MonoBehaviour
     [SerializeField] private GameObject LosePanel;
     [SerializeField] private GameObject PausePanel;
 
+    private bool isFinish = false;
+
     private void Start()
     {
         Time.timeScale = 1.0f;
@@ -27,6 +29,9 @@ public class GameWindowController : MonoBehaviour
 
     public void Win()
     {
+        if (isFinish) return;
+        isFinish = true;
+
         TryOpenNewLevel();
         Time.timeScale = 0.0f;
         WinPanel.SetActive(true);
@@ -34,6 +39,8 @@ public class GameWindowController : MonoBehaviour
 
     public void Lose()
     {
+        if (isFinish) return;
+        isFinish = true;
         Time.timeScale = 0.0f;
         LosePanel.SetActive(true);
     }

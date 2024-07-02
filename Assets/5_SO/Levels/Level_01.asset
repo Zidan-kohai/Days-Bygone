@@ -27,21 +27,21 @@ MonoBehaviour:
       Count: 2
   - time: 15
     enemies:
-    - Type: 0
-      Count: 1
     - Type: 1
-      Count: 3
+      Count: 2
   - time: 20
     enemies:
     - Type: 0
-      Count: 4
-    - Type: 1
       Count: 2
+    - Type: 1
+      Count: 1
   - time: 25
     enemies:
-    - Type: 0
-      Count: 5
+    - Type: 1
+      Count: 2
   - time: 30
     enemies:
-    - Type: 1
-      Count: 4
+    - Type: 0
+      Count: 1
+    - Type: 0
+      Count: 2
