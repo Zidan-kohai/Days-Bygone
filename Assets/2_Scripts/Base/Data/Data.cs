@@ -122,8 +122,8 @@ namespace Base.Data
 
         public MyDictionary<int, WeaponData>[] Weapons = new MyDictionary<int, WeaponData>[]
         {
-            new MyDictionary<int, WeaponData> (0, new WeaponData(){ Damage = 50, SpawnSpeed = 2, BulletSpeed = 5, UpgrateCost = 10, MaxUpdateTimes = 5 } ),
-            new MyDictionary<int, WeaponData> (1, new WeaponData(){ Damage = 70, SpawnSpeed = 1.5f, BulletSpeed = 6, UpgrateCost = 10, MaxUpdateTimes = 5 } ),
+            new MyDictionary<int, WeaponData> (0, new WeaponData(){ Damage = 50, SpawnSpeed = 1.7f, BulletSpeed = 5, UpgrateCost = 10, MaxUpdateTimes = 5 } ),
+            new MyDictionary<int, WeaponData> (1, new WeaponData(){ Damage = 70, SpawnSpeed = 1.4f, BulletSpeed = 6, UpgrateCost = 10, MaxUpdateTimes = 5 } ),
             new MyDictionary<int, WeaponData> (2, new WeaponData(){ Damage = 100, SpawnSpeed = 1, BulletSpeed = 7, UpgrateCost = 10, MaxUpdateTimes = 5 } ),
             new MyDictionary<int, WeaponData> (3, new WeaponData(){ Damage = 150, SpawnSpeed = 0.5f, BulletSpeed = 8, UpgrateCost = 10, MaxUpdateTimes = 5 } ),
         };
