@@ -64,7 +64,8 @@ namespace Base.Data
                     weapon.Value.SpawnSpeed -= 0.1f; 
                     weapon.Value.SpawnSpeed = MathF.Round(weapon.Value.SpawnSpeed, 1);
                     weapon.Value.SpawnSpeed = Mathf.Clamp(weapon.Value.SpawnSpeed, 0.1f, 1000);
-                    weapon.Value.BulletSpeed += 0.3f; 
+                    weapon.Value.BulletSpeed += 0.3f;
+                    weapon.Value.BulletSpeed = MathF.Round(weapon.Value.BulletSpeed, 1);
                     weapon.Value.UpdateTimes++; 
                     weapon.Value.UpgrateCost += 10;
 

@@ -57,7 +57,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   closePanel: {fileID: 8834522609892839905}
   reloadSpeedView: {fileID: 1966471332121115395}
-  bulletSpeedView: {fileID: 5590674690597466159}
+  bulletSpeedView: {fileID: 6856082032151681956}
   damageView: {fileID: 5590674690597466159}
   upgradeButton: {fileID: 4093175189164101222}
   upgradeCostView: {fileID: 2311861624886071441}
