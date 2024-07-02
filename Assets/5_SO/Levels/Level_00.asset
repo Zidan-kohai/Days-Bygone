@@ -20,16 +20,16 @@ MonoBehaviour:
   - time: 7
     enemies:
     - Type: 0
-      Count: 3
+      Count: 1
   - time: 15
     enemies:
     - Type: 0
-      Count: 5
+      Count: 2
   - time: 20
     enemies:
     - Type: 0
-      Count: 7
+      Count: 2
   - time: 30
     enemies:
     - Type: 0
-      Count: 10
+      Count: 3
