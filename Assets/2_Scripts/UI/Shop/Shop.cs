@@ -24,6 +24,10 @@ public class Shop : MonoBehaviour
         leftButton.onClick.AddListener(LeftButtonClick);
     }
 
+    public void AddMoney(int money)
+    {
+        Wallet.Instance.AddMoney(money);
+    }
 
     private void RightButtonClick()
     {

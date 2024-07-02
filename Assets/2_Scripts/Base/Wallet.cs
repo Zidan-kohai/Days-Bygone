@@ -23,12 +23,12 @@ public class Wallet : MonoBehaviour
     public void AddMoney(int money)
     {
         Data.Instance.ChangeMoney(money);
-        onMoneyChange();
+        onMoneyChange?.Invoke();
     }
 
     public void SubstructMoney(int money)
     {
         Data.Instance.ChangeMoney(-money);
-        onMoneyChange();
+        onMoneyChange?.Invoke();
     }
 }
