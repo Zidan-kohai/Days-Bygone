@@ -20,7 +20,6 @@ public class Shop : MonoBehaviour
             bool isClose = !Data.Instance.SaveData.OpenWeaponId.Contains(i);
             weapons[i].Init(isClose, i);
         }
-
         rightButton.onClick.AddListener(RightButtonClick);
         leftButton.onClick.AddListener(LeftButtonClick);
 
