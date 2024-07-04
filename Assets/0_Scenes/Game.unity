@@ -3120,6 +3120,9 @@ MonoBehaviour:
   - {fileID: -7726938366690648991, guid: 907311e814d121e4bacc00f44a8baf4d, type: 3}
   - {fileID: 4473250490302287164, guid: d7194bda36ca48f419550ff30b2cf131, type: 3}
   - {fileID: 9184405240566208790, guid: bcc8b34ff30f06e46b140b5abaa360a0, type: 3}
+  - {fileID: 6717606551504914852, guid: 7e76ceac73b14af4090cba42c7020530, type: 3}
+  - {fileID: 2939000893392894205, guid: 8c6e3d5ae3fff7b46b557fb4fab6e9f8, type: 3}
+  - {fileID: 5908751914174120663, guid: 56f68056362028148968b2a80a6975ef, type: 3}
   enemies: []
   isLastWave: 0
 --- !u!4 &1690731833 stripped

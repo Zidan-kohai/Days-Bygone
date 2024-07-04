@@ -93,6 +93,9 @@ namespace Base.Spawner
                         case EnemyType.Worm:
                             Init(enemyPool.GetFree<Worm>());
                             break;
+                        case EnemyType.Santa:
+                            Init(enemyPool.GetFree<Santa>());
+                            break;
                     }
                 }
             }

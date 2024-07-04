@@ -221,7 +221,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 5.2, y: 32.6}
+  m_AnchoredPosition: {x: 1.5, y: 25.9}
   m_SizeDelta: {x: 30, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &8775650688507517089
@@ -284,13 +284,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 582726771985652559}
-  - component: {fileID: 9184405240566208790}
+  - component: {fileID: 6717606551504914852}
   - component: {fileID: 4330123924778749664}
   - component: {fileID: 4278583717410896888}
   - component: {fileID: 6565089289962178784}
   - component: {fileID: 4115256865243118768}
   m_Layer: 8
-  m_Name: Cyborg
+  m_Name: Santa
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -312,7 +312,7 @@ Transform:
   - {fileID: 7839745001766892636}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &9184405240566208790
+--- !u!114 &6717606551504914852
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -321,10 +321,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 7986844870875953390}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c7be204a1defe34aa83102c325d9b4c, type: 3}
+  m_Script: {fileID: 11500000, guid: a5a92cabb754c1f4597f36561a9f5c9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  config: {fileID: 11400000, guid: 24da9f94baec0ab44bf3c13f7a0cbb30, type: 2}
+  config: {fileID: 11400000, guid: 922785aacaedafb49a80cecd5e07d979, type: 2}
   rb: {fileID: 6565089289962178784}
   healthView: {fileID: 8775650688507517089}
   animator: {fileID: 4278583717410896888}
@@ -370,9 +370,9 @@ SpriteRenderer:
   m_SortingLayerID: -1604070495
   m_SortingLayer: 1
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: e7ec4af50f566624fbaee5c56616a2d4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 608680b62876cea44ab7be1cbb9f5d4a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 0.47, y: 0.56}
@@ -391,7 +391,7 @@ Animator:
   m_GameObject: {fileID: 7986844870875953390}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: f5ad2ff8aed59f84ea80c02c39403070, type: 2}
+  m_Controller: {fileID: 9100000, guid: f7a9f1d4fde137548b694c75e79f0d53, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -461,18 +461,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.027084716, y: 0.000441432}
+  m_Offset: {x: 0.0007398911, y: 0.000070631504}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.3, y: 0.46}
+    oldSize: {x: 0.24, y: 0.43}
     newSize: {x: 0.47, y: 0.56}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.37928975, y: 0.47464406}
+  m_Size: {x: 0.24973243, y: 0.4418187}
   m_EdgeRadius: 0
 --- !u!1 &9164550495720633881
 GameObject:

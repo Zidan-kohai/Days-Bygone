@@ -15,6 +15,7 @@
         BigGoblin,
         Demon,
         Serber,
-        Worm
+        Worm,
+        Santa
     }
 }

@@ -61,3 +61,15 @@ MonoBehaviour:
     enemies:
     - Type: 11
       Count: 1
+  - time: 60
+    enemies:
+    - Type: 12
+      Count: 1
+  - time: 60
+    enemies:
+    - Type: 13
+      Count: 1
+  - time: 60
+    enemies:
+    - Type: 14
+      Count: 1

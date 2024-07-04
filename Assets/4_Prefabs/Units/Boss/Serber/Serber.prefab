@@ -221,7 +221,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.5, y: 25.9}
+  m_AnchoredPosition: {x: 5.2, y: 32.6}
   m_SizeDelta: {x: 30, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &8775650688507517089
@@ -284,13 +284,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 582726771985652559}
-  - component: {fileID: 5908751914174120663}
+  - component: {fileID: 2939000893392894205}
   - component: {fileID: 4330123924778749664}
   - component: {fileID: 4278583717410896888}
   - component: {fileID: 6565089289962178784}
   - component: {fileID: 4115256865243118768}
   m_Layer: 8
-  m_Name: Cyborg
+  m_Name: Serber
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -306,13 +306,13 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 6, y: 6, z: 6}
+  m_LocalScale: {x: 7, y: 7, z: 7}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 7839745001766892636}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5908751914174120663
+--- !u!114 &2939000893392894205
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -321,10 +321,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 7986844870875953390}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6743bf51fdb5921448e82a178fe33575, type: 3}
+  m_Script: {fileID: 11500000, guid: 7783432c6ffcfec4b9e85d05cccc993c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  config: {fileID: 11400000, guid: 0ffe52bb3a23e7241bd2800106936376, type: 2}
+  config: {fileID: 11400000, guid: 7db90907c5c7dd84bb7c8e933093edfd, type: 2}
   rb: {fileID: 6565089289962178784}
   healthView: {fileID: 8775650688507517089}
   animator: {fileID: 4278583717410896888}
@@ -370,7 +370,7 @@ SpriteRenderer:
   m_SortingLayerID: -1604070495
   m_SortingLayer: 1
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 608680b62876cea44ab7be1cbb9f5d4a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1eedf5799fa299b44b69d1e8f50ff413, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -391,7 +391,7 @@ Animator:
   m_GameObject: {fileID: 7986844870875953390}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: f7a9f1d4fde137548b694c75e79f0d53, type: 2}
+  m_Controller: {fileID: 9100000, guid: 84026c7c1758de8498cfe345b98cf8dc, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -461,18 +461,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0007398911, y: 0.000070631504}
+  m_Offset: {x: 0.0016042739, y: -0.0013158321}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.24, y: 0.43}
+    oldSize: {x: 0.4, y: 0.29}
     newSize: {x: 0.47, y: 0.56}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.24973243, y: 0.4418187}
+  m_Size: {x: 0.4302506, y: 0.3059461}
   m_EdgeRadius: 0
 --- !u!1 &9164550495720633881
 GameObject:
