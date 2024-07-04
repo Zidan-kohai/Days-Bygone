@@ -324,7 +324,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a6f54cc59674a049b2d2b2061580393, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  config: {fileID: 11400000, guid: 562a04f8299dc28469bf0c631665423f, type: 2}
+  config: {fileID: 11400000, guid: 4c2256257123dd149bd1075cd4bf8312, type: 2}
   rb: {fileID: 6565089289962178784}
   healthView: {fileID: 8775650688507517089}
   animator: {fileID: 4278583717410896888}

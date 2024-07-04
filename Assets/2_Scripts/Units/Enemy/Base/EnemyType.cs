@@ -4,6 +4,13 @@
     {
         Skeleton,
         Halk,
-        Hammerman
+        Hammerman,
+        Cyborg,
+        Goblin,
+        MushroomMan,
+        Neanderthal,
+        Neanderthal2,
+        RedfGoblin,
+        Slime
     }
 }

@@ -78,7 +78,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Neanderthal
+  m_Name: Animator
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: Attack
@@ -121,7 +121,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: cc9962b42f9af49478f5e1faa2b23684, type: 2}
+  m_Motion: {fileID: 7400000, guid: 089fee53d38f00641bce6c50ca9436c1, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -148,7 +148,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 731f6a84ecfe7e242834927aa4a11b34, type: 2}
+  m_Motion: {fileID: 7400000, guid: 5a8e519e1a337ea4286948690fdb853a, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
