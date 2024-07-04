@@ -11,6 +11,10 @@
         Neanderthal,
         Neanderthal2,
         RedfGoblin,
-        Slime
+        Slime,
+        BigGoblin,
+        Demon,
+        Serber,
+        Worm
     }
 }

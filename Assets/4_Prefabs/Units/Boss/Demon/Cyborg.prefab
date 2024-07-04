@@ -284,7 +284,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 582726771985652559}
-  - component: {fileID: 4741007364523354012}
+  - component: {fileID: 9184405240566208790}
   - component: {fileID: 4330123924778749664}
   - component: {fileID: 4278583717410896888}
   - component: {fileID: 6565089289962178784}
@@ -306,13 +306,13 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3.5, y: 3.5, z: 3.5}
+  m_LocalScale: {x: 6, y: 6, z: 6}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 7839745001766892636}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4741007364523354012
+--- !u!114 &9184405240566208790
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -321,10 +321,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 7986844870875953390}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a6f54cc59674a049b2d2b2061580393, type: 3}
+  m_Script: {fileID: 11500000, guid: 1c7be204a1defe34aa83102c325d9b4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  config: {fileID: 11400000, guid: 10769026601e1004a98427ff9925dff9, type: 2}
+  config: {fileID: 11400000, guid: 24da9f94baec0ab44bf3c13f7a0cbb30, type: 2}
   rb: {fileID: 6565089289962178784}
   healthView: {fileID: 8775650688507517089}
   animator: {fileID: 4278583717410896888}
@@ -391,7 +391,7 @@ Animator:
   m_GameObject: {fileID: 7986844870875953390}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 84026c7c1758de8498cfe345b98cf8dc, type: 2}
+  m_Controller: {fileID: 9100000, guid: f5ad2ff8aed59f84ea80c02c39403070, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

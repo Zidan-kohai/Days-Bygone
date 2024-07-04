@@ -3096,6 +3096,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameWindowController: {fileID: 2069354566}
   levels:
+  - {fileID: 11400000, guid: f8090443b1643044b9c6a13b34a4882c, type: 2}
   - {fileID: 11400000, guid: a054e3b37a49a7148b6a821ad4b208ee, type: 2}
   - {fileID: 11400000, guid: 278f71cdbc4a4db409076a655f99c2cc, type: 2}
   - {fileID: 11400000, guid: bbc27942812f58246b3f96926b927093, type: 2}
@@ -3106,9 +3107,19 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ce3cc81d860a0674b9074eed7e579755, type: 2}
   - {fileID: 11400000, guid: f21a92a94281c844785e2de2329207c6, type: 2}
   - {fileID: 11400000, guid: 53d15f826b3d83b42b6364fbec4b1dca, type: 2}
-  skeletonPrefab: {fileID: 4741007364523354012, guid: 87967befd84bfcc4d9275289aebdbedc, type: 3}
-  halkPrefab: {fileID: 689021551087084832, guid: 2abd35fab0bacfb40b6feaf0a3f45ba8, type: 3}
-  hammermanPrefab: {fileID: 4795166405690696293, guid: 643025fa4dfa021469e75d91de8ab3f4, type: 3}
+  enemiesPrefab:
+  - {fileID: 6771178190355445483, guid: bce72e23374823441886e3d5491ed6db, type: 3}
+  - {fileID: -4077230569324668741, guid: c251ef7bd0e73614dbe07cc21a104e66, type: 3}
+  - {fileID: 689021551087084832, guid: 2abd35fab0bacfb40b6feaf0a3f45ba8, type: 3}
+  - {fileID: 4795166405690696293, guid: 643025fa4dfa021469e75d91de8ab3f4, type: 3}
+  - {fileID: 4878145703198944644, guid: 7b2f462f1909ed148aa0d28a1178fa4f, type: 3}
+  - {fileID: 1026196546741996632, guid: af23e6217eaa7f84ab5210533704af76, type: 3}
+  - {fileID: 4514390534162223994, guid: 34fdaaae860c5af4b839e892990bc895, type: 3}
+  - {fileID: 2234341664884112534, guid: 8bccc5e3877ed124c87a020b3e0a3daa, type: 3}
+  - {fileID: 4741007364523354012, guid: 87967befd84bfcc4d9275289aebdbedc, type: 3}
+  - {fileID: -7726938366690648991, guid: 907311e814d121e4bacc00f44a8baf4d, type: 3}
+  - {fileID: 4473250490302287164, guid: d7194bda36ca48f419550ff30b2cf131, type: 3}
+  - {fileID: 9184405240566208790, guid: bcc8b34ff30f06e46b140b5abaa360a0, type: 3}
   enemies: []
   isLastWave: 0
 --- !u!4 &1690731833 stripped

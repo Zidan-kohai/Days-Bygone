@@ -1,9 +1,10 @@
-using Internal.Codebase.ObjectPool;
+using ObjectPool.Base;
 using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using Unit.Enemy.Base;
 using UnityEngine;
+using static Unity.Burst.Intrinsics.Arm;
 
 namespace Base.Spawner
 {
@@ -11,13 +12,9 @@ namespace Base.Spawner
     {
         [SerializeField] private GameWindowController gameWindowController;
         [SerializeField] private List<Level> levels = new List<Level>();
-        [SerializeField] private Skeleton skeletonPrefab;
-        [SerializeField] private Halk halkPrefab;
-        [SerializeField] private Hammerman hammermanPrefab;
+        [SerializeField] private List<Enemy> enemiesPrefab;
 
-        private ObjectPool<Skeleton> skeletonPool;
-        private ObjectPool<Halk> cyborgPool;
-        private ObjectPool<Hammerman> hammermanPool;
+        private ObjectPool<Enemy> enemyPool;
 
         [SerializeField] private List<Enemy> enemies = new List<Enemy>();
         [SerializeField] private bool isLastWave = false;
@@ -26,9 +23,7 @@ namespace Base.Spawner
 
         private void Start()
         {
-            skeletonPool = new ObjectPool<Skeleton>(skeletonPrefab, transform, 5, true);
-            cyborgPool = new ObjectPool<Halk>(halkPrefab, transform, 5, true);
-            hammermanPool = new ObjectPool<Hammerman>(hammermanPrefab, transform, 5, true);
+            enemyPool = new ObjectPool<Enemy>(enemiesPrefab, transform, 3, true);
 
             InitWave();
         }
@@ -57,13 +52,46 @@ namespace Base.Spawner
                     switch (enemy.Type)
                     {
                         case EnemyType.Skeleton:
-                            Init(skeletonPool.GetFree());
+                            Init(enemyPool.GetFree<Skeleton>());
                             break;
                         case EnemyType.Halk:
-                            Init(cyborgPool.GetFree());
+                            Init(enemyPool.GetFree<Halk>());
                             break;
                         case EnemyType.Hammerman:
-                            Init(hammermanPool.GetFree());
+                            Init(enemyPool.GetFree<Hammerman>());
+                            break;
+                        case EnemyType.Cyborg:
+                            Init(enemyPool.GetFree<Cyborg>());
+                            break;
+                        case EnemyType.Goblin:
+                            Init(enemyPool.GetFree<Goblin>());
+                            break;
+                        case EnemyType.MushroomMan:
+                            Init(enemyPool.GetFree<MushroomMan>());
+                            break;
+                        case EnemyType.Neanderthal:
+                            Init(enemyPool.GetFree<Neanderthal>());
+                            break;
+                        case EnemyType.Neanderthal2:
+                            Init(enemyPool.GetFree<Neanderthal2>());
+                            break;
+                        case EnemyType.RedfGoblin:
+                            Init(enemyPool.GetFree<RedfGoblin>());
+                            break;
+                        case EnemyType.Slime:
+                            Init(enemyPool.GetFree<Slime>());
+                            break;
+                        case EnemyType.BigGoblin:
+                            Init(enemyPool.GetFree<BigGoblin>());
+                            break;
+                        case EnemyType.Demon:
+                            Init(enemyPool.GetFree<Demon>());
+                            break;
+                        case EnemyType.Serber:
+                            Init(enemyPool.GetFree<Serber>());
+                            break;
+                        case EnemyType.Worm:
+                            Init(enemyPool.GetFree<Worm>());
                             break;
                     }
                 }
