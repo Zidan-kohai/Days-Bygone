@@ -97,6 +97,12 @@ namespace Base.Data
             Save();
         }
 
+        public void ChangeMusicVolume(bool isOn)
+        {
+            SaveData.IsMusicOn = isOn;
+            Save();
+        }
+
         private void Save()
         {
             string data = JsonUtility.ToJson(SaveData);
@@ -118,6 +124,7 @@ namespace Base.Data
         public List<int> OpenWeaponId = new List<int>() { 0 };
         public int Money = 0;
         public FenceData Fence;
+        public bool IsMusicOn = true;
 
 
         public MyDictionary<int, WeaponData>[] Weapons = new MyDictionary<int, WeaponData>[]
