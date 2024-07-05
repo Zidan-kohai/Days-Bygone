@@ -3665,6 +3665,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 760646717}
   m_CullTransparentMesh: 1
+--- !u!114 &766324255 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2311861624886071441, guid: 95e7815efb3f73044afa69dc125d7635, type: 3}
+  m_PrefabInstance: {fileID: 3898753933769952583}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &799872182
 GameObject:
   m_ObjectHideFlags: 0
@@ -4500,7 +4511,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1013755951
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7530,6 +7541,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1357446837446463934, guid: 95e7815efb3f73044afa69dc125d7635, type: 3}
+      propertyPath: upgradeTextView
+      value: 
+      objectReference: {fileID: 766324255}
     - target: {fileID: 1888343155633959404, guid: 95e7815efb3f73044afa69dc125d7635, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

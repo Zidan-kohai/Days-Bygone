@@ -12,7 +12,6 @@ public class WeaponOnShop : MonoBehaviour
     [SerializeField] private TextMeshProUGUI damageView;
     [SerializeField] private Button upgradeButton;
     [SerializeField] private TextMeshProUGUI upgradeCostView;
-    [SerializeField] private TextMeshProUGUI upgradeTextView;
     [SerializeField] private Image goldIcon;
     [SerializeField] private Button equipButton;
     [SerializeField] private TextMeshProUGUI equipText;
@@ -50,8 +49,7 @@ public class WeaponOnShop : MonoBehaviour
 
             if (data.UpdateTimes >= data.MaxUpdateTimes)
             {
-                upgradeTextView.text = "Max";
-                upgradeCostView.gameObject.SetActive(false);
+                upgradeCostView.text = "Max";
                 goldIcon.gameObject.SetActive(false);
                 upgradeButton.interactable = false;
             }
