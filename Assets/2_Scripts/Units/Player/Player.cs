@@ -15,6 +15,9 @@ namespace Unit.Player
         [SerializeField] private float timeBtwShot;
         [SerializeField] private float startTimeBtwShot;
 
+
+        [SerializeField] private Animator animator;
+
         private void Start()
         {
             int weaponID = Data.Instance.CurrentWeaponId;
@@ -34,13 +37,8 @@ namespace Unit.Player
             {
                 if (Input.GetMouseButton(0))
                 {
-                    Bullet bulletInstance = Instantiate(currentBullet, shootPoint.position, transform.rotation);
-                    bulletInstance.transform.rotation = gunOnHand.transform.rotation; 
+                    animator.SetTrigger("shoot");
                     timeBtwShot = startTimeBtwShot;
-
-                    int damage = Data.Instance.GetWeaponData(Data.Instance.CurrentWeaponId).Damage;
-                    float bulletSpeed = Data.Instance.GetWeaponData(Data.Instance.CurrentWeaponId).BulletSpeed;
-                    bulletInstance.Init(damage, bulletSpeed);
                 }
             }
             else
@@ -48,5 +46,15 @@ namespace Unit.Player
                 timeBtwShot -= Time.deltaTime;
             }
         }
+        private void Shoot()
+        {
+            Bullet bulletInstance = Instantiate(currentBullet, shootPoint.position, transform.rotation);
+            bulletInstance.transform.rotation = gunOnHand.transform.rotation;
+
+            int damage = Data.Instance.GetWeaponData(Data.Instance.CurrentWeaponId).Damage;
+            float bulletSpeed = Data.Instance.GetWeaponData(Data.Instance.CurrentWeaponId).BulletSpeed;
+            bulletInstance.Init(damage, bulletSpeed);
+        }
     }
+
 }
