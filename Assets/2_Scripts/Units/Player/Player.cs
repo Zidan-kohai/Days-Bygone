@@ -14,7 +14,7 @@ namespace Unit.Player
         [SerializeField] private Transform shootPoint;
         [SerializeField] private float timeBtwShot;
         [SerializeField] private float startTimeBtwShot;
-
+        [SerializeField] private Transform sniperWeapon;
 
         [SerializeField] private Animator animator;
 
@@ -25,6 +25,11 @@ namespace Unit.Player
             currentBullet = bullets[weaponID];
 
             startTimeBtwShot = Data.Instance.GetWeaponData(weaponID).SpawnSpeed;
+
+            if(weaponID == 5)
+            {
+                sniperWeapon.gameObject.SetActive(true);
+            }
         }
 
         private void Update()

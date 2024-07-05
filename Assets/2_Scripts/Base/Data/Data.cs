@@ -126,6 +126,8 @@ namespace Base.Data
             new MyDictionary<int, WeaponData> (1, new WeaponData(){ Damage = 70, SpawnSpeed = 1.4f, BulletSpeed = 6, UpgrateCost = 10, MaxUpdateTimes = 5 } ),
             new MyDictionary<int, WeaponData> (2, new WeaponData(){ Damage = 100, SpawnSpeed = 1.2f, BulletSpeed = 7, UpgrateCost = 10, MaxUpdateTimes = 5 } ),
             new MyDictionary<int, WeaponData> (3, new WeaponData(){ Damage = 150, SpawnSpeed = 0.7f, BulletSpeed = 8, UpgrateCost = 10, MaxUpdateTimes = 5 } ),
+            new MyDictionary<int, WeaponData> (4, new WeaponData(){ Damage = 150, SpawnSpeed = 0.7f, BulletSpeed = 8, UpgrateCost = 10, MaxUpdateTimes = 5 } ),
+            new MyDictionary<int, WeaponData> (5, new WeaponData(){ Damage = 150, SpawnSpeed = 0.7f, BulletSpeed = 8, UpgrateCost = 10, MaxUpdateTimes = 5 } ),
         };
 
         [Serializable]

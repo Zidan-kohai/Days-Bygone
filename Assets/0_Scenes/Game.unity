@@ -2638,6 +2638,8 @@ MonoBehaviour:
   gun_01: {fileID: 1685995320646636490, guid: 5ce542ebe09f0a443a097899c70d00d2, type: 3}
   gun_02: {fileID: 1685995320646636490, guid: 8f0ddbd9573aa7441863628c5e48b67e, type: 3}
   gun_03: {fileID: 1685995320646636490, guid: ed9699f483fe3dd46a0b2e24e87ff9ea, type: 3}
+  gun_04: {fileID: 1685995320646636490, guid: aa07ab251e2a7ef4cbd8a2220984e56d, type: 3}
+  gun_05: {fileID: 1685995320646636490, guid: 44672fb3a820f2a4cb79a60b268a9480, type: 3}
   Ypos: 10
   maxXpos: -7
   minXpos: 7
@@ -2645,6 +2647,8 @@ MonoBehaviour:
   gun_01Chance: 100
   gun_02Chance: 100
   gun_03Chance: 100
+  gun_04Chance: 100
+  gun_05Chance: 100
 --- !u!224 &1427812906 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8236583029046782203, guid: 47eff0eddbfa21a48a12ea041fb55d35, type: 3}

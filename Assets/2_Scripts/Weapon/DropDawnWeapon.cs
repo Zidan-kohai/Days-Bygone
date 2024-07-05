@@ -10,6 +10,8 @@ public class DropDawnWeapon : MonoBehaviour
     [SerializeField] private BulletDrop gun_01;
     [SerializeField] private BulletDrop gun_02;
     [SerializeField] private BulletDrop gun_03;
+    [SerializeField] private BulletDrop gun_04;
+    [SerializeField] private BulletDrop gun_05;
 
     [SerializeField] private int Ypos = 10, maxXpos = -5, minXpos = 5;
 
@@ -18,6 +20,8 @@ public class DropDawnWeapon : MonoBehaviour
     public int gun_01Chance = 200;
     public int gun_02Chance = 300;
     public int gun_03Chance = 400;
+    public int gun_04Chance = 400;
+    public int gun_05Chance = 400;
 
     private void Start()
     {
@@ -66,6 +70,26 @@ public class DropDawnWeapon : MonoBehaviour
                 if (CheckDropDawn(gun_03Chance))
                 {
                     SpawnDropDawnGun(gun_03);
+                    yield return new WaitForSeconds(5);
+                }
+                continue;
+            }
+
+            if (!Data.Instance.SaveData.OpenWeaponId.Contains(4))
+            {
+                if (CheckDropDawn(gun_04Chance))
+                {
+                    SpawnDropDawnGun(gun_04);
+                    yield return new WaitForSeconds(5);
+                }
+                continue;
+            }
+
+            if (!Data.Instance.SaveData.OpenWeaponId.Contains(5))
+            {
+                if (CheckDropDawn(gun_05Chance))
+                {
+                    SpawnDropDawnGun(gun_05);
                     yield return new WaitForSeconds(5);
                 }
                 continue;
