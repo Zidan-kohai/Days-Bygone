@@ -130,11 +130,11 @@ namespace Base.Data
         public MyDictionary<int, WeaponData>[] Weapons = new MyDictionary<int, WeaponData>[]
         {
             new MyDictionary<int, WeaponData> (0, new WeaponData(){ Damage = 50, SpawnSpeed = 1.7f, BulletSpeed = 5, UpgrateCost = 10, MaxUpdateTimes = 5 } ),
-            new MyDictionary<int, WeaponData> (1, new WeaponData(){ Damage = 70, SpawnSpeed = 1.4f, BulletSpeed = 6, UpgrateCost = 10, MaxUpdateTimes = 5 } ),
-            new MyDictionary<int, WeaponData> (2, new WeaponData(){ Damage = 100, SpawnSpeed = 1.2f, BulletSpeed = 7, UpgrateCost = 10, MaxUpdateTimes = 5 } ),
-            new MyDictionary<int, WeaponData> (3, new WeaponData(){ Damage = 150, SpawnSpeed = 0.7f, BulletSpeed = 8, UpgrateCost = 10, MaxUpdateTimes = 5 } ),
-            new MyDictionary<int, WeaponData> (4, new WeaponData(){ Damage = 150, SpawnSpeed = 0.7f, BulletSpeed = 8, UpgrateCost = 10, MaxUpdateTimes = 5 } ),
-            new MyDictionary<int, WeaponData> (5, new WeaponData(){ Damage = 150, SpawnSpeed = 0.7f, BulletSpeed = 8, UpgrateCost = 10, MaxUpdateTimes = 5 } ),
+            new MyDictionary<int, WeaponData> (1, new WeaponData(){ Damage = 70, SpawnSpeed = 1.4f, BulletSpeed = 6, UpgrateCost = 20, MaxUpdateTimes = 5 } ),
+            new MyDictionary<int, WeaponData> (2, new WeaponData(){ Damage = 90, SpawnSpeed = 1.2f, BulletSpeed = 7, UpgrateCost = 40, MaxUpdateTimes = 5 } ),
+            new MyDictionary<int, WeaponData> (3, new WeaponData(){ Damage = 110, SpawnSpeed = 0.9f, BulletSpeed = 8, UpgrateCost = 50, MaxUpdateTimes = 5 } ),
+            new MyDictionary<int, WeaponData> (4, new WeaponData(){ Damage = 130, SpawnSpeed = 0.8f, BulletSpeed = 9, UpgrateCost = 60, MaxUpdateTimes = 5 } ),
+            new MyDictionary<int, WeaponData> (5, new WeaponData(){ Damage = 150, SpawnSpeed = 0.7f, BulletSpeed = 10, UpgrateCost = 70, MaxUpdateTimes = 5 } ),
         };
 
         [Serializable]

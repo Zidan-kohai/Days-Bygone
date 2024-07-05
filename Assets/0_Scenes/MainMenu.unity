@@ -247,7 +247,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &41456471
@@ -4482,7 +4482,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1012402837
@@ -4511,7 +4511,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1013755951
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5094,7 +5094,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1229973382
@@ -7246,7 +7246,6 @@ MonoBehaviour:
   mapItemHandler: {fileID: 606258256}
   mapItemPrefab: {fileID: 8394341678604952864, guid: bacecf3946366b04d8c1528b9e6bd411, type: 3}
   levels:
-  - {fileID: 11400000, guid: f8090443b1643044b9c6a13b34a4882c, type: 2}
   - {fileID: 11400000, guid: a054e3b37a49a7148b6a821ad4b208ee, type: 2}
   - {fileID: 11400000, guid: 278f71cdbc4a4db409076a655f99c2cc, type: 2}
   - {fileID: 11400000, guid: bbc27942812f58246b3f96926b927093, type: 2}

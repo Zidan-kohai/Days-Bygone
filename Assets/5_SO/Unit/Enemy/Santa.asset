@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68a287979c469864b81759b8bf06e3de, type: 3}
   m_Name: Santa
   m_EditorClassIdentifier: 
-  Health: 100
-  Speed: 2
-  Damage: 2
-  Reward: 5
+  Health: 1800
+  Speed: 0.3
+  Damage: 80
+  Reward: 300

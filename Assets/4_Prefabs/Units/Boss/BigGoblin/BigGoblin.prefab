@@ -290,7 +290,7 @@ GameObject:
   - component: {fileID: 6565089289962178784}
   - component: {fileID: 4115256865243118768}
   m_Layer: 8
-  m_Name: Cyborg
+  m_Name: BigGoblin
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

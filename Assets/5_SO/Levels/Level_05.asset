@@ -15,39 +15,31 @@ MonoBehaviour:
   Waves:
   - time: 3
     enemies:
-    - Type: 0
-      Count: 1
-    - Type: 1
-      Count: 1
+    - Type: 5
+      Count: 2
   - time: 7
     enemies:
-    - Type: 0
-      Count: 2
-    - Type: 1
+    - Type: 5
       Count: 1
-    - Type: 2
+    - Type: 3
       Count: 1
   - time: 15
     enemies:
-    - Type: 0
-      Count: 2
-    - Type: 1
-      Count: 3
-    - Type: 2
+    - Type: 6
       Count: 2
   - time: 20
     enemies:
-    - Type: 0
+    - Type: 6
+      Count: 1
+    - Type: 5
       Count: 2
-    - Type: 1
-      Count: 3
-    - Type: 2
-      Count: 4
   - time: 30
     enemies:
+    - Type: 6
+      Count: 2
     - Type: 0
-      Count: 5
-    - Type: 1
-      Count: 3
-    - Type: 2
-      Count: 5
+      Count: 1
+  - time: 40
+    enemies:
+    - Type: 11
+      Count: 1
