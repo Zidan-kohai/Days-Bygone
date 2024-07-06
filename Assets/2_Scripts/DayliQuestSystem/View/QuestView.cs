@@ -21,6 +21,7 @@ public class QuestView : MonoBehaviour
         this.onStateChange = onStateChange;
         onStateChange.AddListener(OnStateChage);
         onClaim.AddListener(DisableButton);
+        button.onClick.AddListener(() => claim?.Invoke());
 
         if (isClaim || currentProgress < maxProgress)
         {
@@ -29,7 +30,6 @@ public class QuestView : MonoBehaviour
         else
         {
             EnableButton();
-            button.onClick.AddListener(() => claim?.Invoke());
         }
     }
 
