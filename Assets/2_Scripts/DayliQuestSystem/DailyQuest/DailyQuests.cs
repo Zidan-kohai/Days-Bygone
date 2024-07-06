@@ -4,12 +4,12 @@ using System.Collections.Generic;
 public class DailyQuests
 {
     private readonly QuestManager questManager;
-    private List<QuestConfig> questConfigs = new();
+    private List<QuestConfigAndEventProvider> questConfigs = new();
     private DailyQuestsData data;
 
     public List<Quest> Quests { get; private set; }
 
-    public DailyQuests(QuestManager questManager, List<QuestConfig> questConfigs, DailyQuestsData data)
+    public DailyQuests(QuestManager questManager, List<QuestConfigAndEventProvider> questConfigs, DailyQuestsData data)
     {
         this.questManager = questManager;
         this.questConfigs = questConfigs;
@@ -24,7 +24,7 @@ public class DailyQuests
 
         for (int i = 0; i < questConfigs.Count; i++)
         {
-            Quest quest = new Quest(questManager, questConfigs[i], data.QuestDatas[i]);
+            Quest quest = new Quest(questManager, questConfigs[i].QuestConfig, questConfigs[i].OnClaim, data.QuestDatas[i]);
             Quests.Add(quest);
         }
     }

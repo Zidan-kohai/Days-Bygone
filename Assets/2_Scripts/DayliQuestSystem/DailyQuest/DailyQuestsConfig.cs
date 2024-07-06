@@ -1,8 +1,9 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "DayliConfig", menuName = "Quest/DailyQuestsConfig")]
-public class DailyQuestsConfig : ScriptableObject
+[Serializable]
+public class DailyQuestsConfig
 {
-    [field: SerializeField] public List<QuestConfig> questConfigs { get; private set; }
+    [field: SerializeField] public List<QuestConfigAndEventProvider> questConfigAndEventProvider { get; private set; }
 }

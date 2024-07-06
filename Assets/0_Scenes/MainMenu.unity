@@ -214,9 +214,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dailyQuestConfigs:
-  - {fileID: 11400000, guid: 678b0914fcc92294daca12e6e0730aed, type: 2}
-  - {fileID: 11400000, guid: 7aebb99c9522b1a46874a799232585de, type: 2}
-  - {fileID: 11400000, guid: 34b4e33e5abcec8419752699a8608b46, type: 2}
+  - <questConfigAndEventProvider>k__BackingField:
+    - QuestConfig: {fileID: 11400000, guid: 7958c39119b476543b6af56990003529, type: 2}
+      OnClaim:
+        m_PersistentCalls:
+          m_Calls: []
+    - QuestConfig: {fileID: 11400000, guid: b2fa290b6ea2ceb4788ca4f2930b003a, type: 2}
+      OnClaim:
+        m_PersistentCalls:
+          m_Calls: []
+    - QuestConfig: {fileID: 11400000, guid: 26eff2b7efa8b7f489299ba23cf5dff5, type: 2}
+      OnClaim:
+        m_PersistentCalls:
+          m_Calls: []
+  - <questConfigAndEventProvider>k__BackingField:
+    - QuestConfig: {fileID: 11400000, guid: b2fa290b6ea2ceb4788ca4f2930b003a, type: 2}
+      OnClaim:
+        m_PersistentCalls:
+          m_Calls: []
+    - QuestConfig: {fileID: 11400000, guid: 26eff2b7efa8b7f489299ba23cf5dff5, type: 2}
+      OnClaim:
+        m_PersistentCalls:
+          m_Calls: []
+    - QuestConfig: {fileID: 11400000, guid: 7958c39119b476543b6af56990003529, type: 2}
+      OnClaim:
+        m_PersistentCalls:
+          m_Calls: []
   resetable: 0
 --- !u!114 &28803432
 MonoBehaviour:
