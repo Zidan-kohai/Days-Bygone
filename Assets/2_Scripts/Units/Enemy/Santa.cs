@@ -2,7 +2,7 @@
 
 namespace Base.Spawner
 {
-    internal class Santa : Enemy
+    public class Santa : Enemy
     {
     }
 }

@@ -68,17 +68,6 @@ namespace Unit.Enemy.Base
             fence.GetDamage(damage);
         }
 
-        protected void OnDeath()
-        {
-            rb.velocity = Vector3.zero;
-            Debug.Log("Death");
-            gameObject.SetActive(false);
-            fence = null;
-            spriteRenderer.color = Color.white;
-            onDeath?.Invoke(this);
-            Wallet.Instance.AddMoney(reward);
-        }
-
         private void ChangeState(EnemyState newState, bool force = false)
         {
             if (!force)
@@ -116,6 +105,25 @@ namespace Unit.Enemy.Base
             {
                 healthView.value = health;
                 StartCoroutine(DamageAnimation());
+            }
+        }
+
+        protected void OnDeath()
+        {
+            rb.velocity = Vector3.zero;
+            Debug.Log("Death");
+            gameObject.SetActive(false);
+            fence = null;
+            spriteRenderer.color = Color.white;
+            onDeath?.Invoke(this);
+            Wallet.Instance.AddMoney(reward);
+
+            if(QuestManager.Instance.TryGetCurrentDailyQuests(out DailyQuests dailyQuest))
+            {
+                if(dailyQuest.TryGetQuestWithType(QuestType.Kill15Enemy, out Quest quest))
+                {
+                    quest.Increament(1);
+                }
             }
         }
 

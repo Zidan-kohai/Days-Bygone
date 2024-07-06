@@ -2,7 +2,7 @@
 
 namespace Base.Spawner
 {
-    internal class BigGoblin : Enemy
+    public class BigGoblin : Enemy
     {
     }
 }

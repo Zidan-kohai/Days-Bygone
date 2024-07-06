@@ -33,7 +33,7 @@ public class DailyQuests
     {
         quest = null;
 
-        if(Quests.Exists(a => a.GetQuestType == questType))
+        if(!Quests.Exists(a => a.GetQuestType == questType))
         {
             return false;
         }

@@ -5,7 +5,6 @@ using UnityEngine.Events;
 
 public class DailyQuestView : MonoBehaviour
 {
-    [SerializeField] private QuestManager questManager;
     [SerializeField] private QuestView questViewPrefab;
     [SerializeField] private Transform questContainer;
 
@@ -13,7 +12,7 @@ public class DailyQuestView : MonoBehaviour
 
     private void Start()
     {
-        questManager.TryGetCurrentDailyQuests(out DailyQuests dailyQuest);
+        QuestManager.Instance.TryGetCurrentDailyQuests(out DailyQuests dailyQuest);
 
         for (int i = 0; i < dailyQuest.Quests.Count; i++)
         {

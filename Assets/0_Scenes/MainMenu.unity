@@ -134,7 +134,6 @@ GameObject:
   - component: {fileID: 28803428}
   - component: {fileID: 28803430}
   - component: {fileID: 28803429}
-  - component: {fileID: 28803431}
   - component: {fileID: 28803432}
   m_Layer: 5
   m_Name: DailyQuest
@@ -201,124 +200,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 28803427}
   m_CullTransparentMesh: 1
---- !u!114 &28803431
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 28803427}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16f47c17158717e4c9656e143253e1c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dailyQuestConfigs:
-  - <questConfigAndEventProvider>k__BackingField:
-    - QuestConfig: {fileID: 11400000, guid: 7958c39119b476543b6af56990003529, type: 2}
-      RewardText: Claim 100 Money
-      OnClaim:
-        m_PersistentCalls:
-          m_Calls:
-          - m_Target: {fileID: 331710093}
-            m_TargetAssemblyTypeName: Wallet, Assembly-CSharp
-            m_MethodName: AddMoney
-            m_Mode: 3
-            m_Arguments:
-              m_ObjectArgument: {fileID: 0}
-              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-              m_IntArgument: 100
-              m_FloatArgument: 0
-              m_StringArgument: 
-              m_BoolArgument: 0
-            m_CallState: 2
-    - QuestConfig: {fileID: 11400000, guid: b2fa290b6ea2ceb4788ca4f2930b003a, type: 2}
-      RewardText: Claim 100 Money
-      OnClaim:
-        m_PersistentCalls:
-          m_Calls:
-          - m_Target: {fileID: 331710093}
-            m_TargetAssemblyTypeName: Wallet, Assembly-CSharp
-            m_MethodName: AddMoney
-            m_Mode: 3
-            m_Arguments:
-              m_ObjectArgument: {fileID: 0}
-              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-              m_IntArgument: 100
-              m_FloatArgument: 0
-              m_StringArgument: 
-              m_BoolArgument: 0
-            m_CallState: 2
-    - QuestConfig: {fileID: 11400000, guid: 26eff2b7efa8b7f489299ba23cf5dff5, type: 2}
-      RewardText: Claim 100 Money
-      OnClaim:
-        m_PersistentCalls:
-          m_Calls:
-          - m_Target: {fileID: 331710093}
-            m_TargetAssemblyTypeName: Wallet, Assembly-CSharp
-            m_MethodName: AddMoney
-            m_Mode: 3
-            m_Arguments:
-              m_ObjectArgument: {fileID: 0}
-              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-              m_IntArgument: 100
-              m_FloatArgument: 0
-              m_StringArgument: 
-              m_BoolArgument: 0
-            m_CallState: 2
-  - <questConfigAndEventProvider>k__BackingField:
-    - QuestConfig: {fileID: 11400000, guid: b2fa290b6ea2ceb4788ca4f2930b003a, type: 2}
-      RewardText: Claim 100 Money
-      OnClaim:
-        m_PersistentCalls:
-          m_Calls:
-          - m_Target: {fileID: 331710093}
-            m_TargetAssemblyTypeName: Wallet, Assembly-CSharp
-            m_MethodName: AddMoney
-            m_Mode: 3
-            m_Arguments:
-              m_ObjectArgument: {fileID: 0}
-              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-              m_IntArgument: 100
-              m_FloatArgument: 0
-              m_StringArgument: 
-              m_BoolArgument: 0
-            m_CallState: 2
-    - QuestConfig: {fileID: 11400000, guid: 26eff2b7efa8b7f489299ba23cf5dff5, type: 2}
-      RewardText: Claim 100 Money
-      OnClaim:
-        m_PersistentCalls:
-          m_Calls:
-          - m_Target: {fileID: 331710093}
-            m_TargetAssemblyTypeName: Wallet, Assembly-CSharp
-            m_MethodName: AddMoney
-            m_Mode: 3
-            m_Arguments:
-              m_ObjectArgument: {fileID: 0}
-              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-              m_IntArgument: 100
-              m_FloatArgument: 0
-              m_StringArgument: 
-              m_BoolArgument: 0
-            m_CallState: 2
-    - QuestConfig: {fileID: 11400000, guid: 7958c39119b476543b6af56990003529, type: 2}
-      RewardText: Claim 100 Money
-      OnClaim:
-        m_PersistentCalls:
-          m_Calls:
-          - m_Target: {fileID: 331710093}
-            m_TargetAssemblyTypeName: Wallet, Assembly-CSharp
-            m_MethodName: AddMoney
-            m_Mode: 3
-            m_Arguments:
-              m_ObjectArgument: {fileID: 0}
-              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-              m_IntArgument: 100
-              m_FloatArgument: 0
-              m_StringArgument: 
-              m_BoolArgument: 0
-            m_CallState: 2
-  resetable: 0
 --- !u!114 &28803432
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -331,7 +212,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d3d3e85e3158fa43922395fb4fc1d98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questManager: {fileID: 28803431}
+  questManager: {fileID: 2038663713}
   questViewPrefab: {fileID: 7663115010669317149, guid: f5a8c5a4c8f4c9f4a96b503b79409c42, type: 3}
   questContainer: {fileID: 175566399}
 --- !u!1 &41456468
@@ -7934,6 +7815,156 @@ MonoBehaviour:
   currentLastMapItemIndex: 0
   rightButton: {fileID: 1189466546}
   leftButton: {fileID: 1254640380}
+--- !u!1 &2038663711
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2038663712}
+  - component: {fileID: 2038663713}
+  m_Layer: 0
+  m_Name: DailyQuest
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2038663712
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2038663711}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.42558077, y: 0.95637333, z: -8.999128}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2038663713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2038663711}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16f47c17158717e4c9656e143253e1c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dailyQuestConfigs:
+  - <questConfigAndEventProvider>k__BackingField:
+    - QuestConfig: {fileID: 11400000, guid: 7958c39119b476543b6af56990003529, type: 2}
+      RewardText: Claim 100 Money
+      OnClaim:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 331710093}
+            m_TargetAssemblyTypeName: Wallet, Assembly-CSharp
+            m_MethodName: AddMoney
+            m_Mode: 3
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 100
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+    - QuestConfig: {fileID: 11400000, guid: b2fa290b6ea2ceb4788ca4f2930b003a, type: 2}
+      RewardText: Claim 100 Money
+      OnClaim:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 331710093}
+            m_TargetAssemblyTypeName: Wallet, Assembly-CSharp
+            m_MethodName: AddMoney
+            m_Mode: 3
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 100
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+    - QuestConfig: {fileID: 11400000, guid: 26eff2b7efa8b7f489299ba23cf5dff5, type: 2}
+      RewardText: Claim 100 Money
+      OnClaim:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 331710093}
+            m_TargetAssemblyTypeName: Wallet, Assembly-CSharp
+            m_MethodName: AddMoney
+            m_Mode: 3
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 100
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+  - <questConfigAndEventProvider>k__BackingField:
+    - QuestConfig: {fileID: 11400000, guid: b2fa290b6ea2ceb4788ca4f2930b003a, type: 2}
+      RewardText: Claim 100 Money
+      OnClaim:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 331710093}
+            m_TargetAssemblyTypeName: Wallet, Assembly-CSharp
+            m_MethodName: AddMoney
+            m_Mode: 3
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 100
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+    - QuestConfig: {fileID: 11400000, guid: 26eff2b7efa8b7f489299ba23cf5dff5, type: 2}
+      RewardText: Claim 100 Money
+      OnClaim:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 331710093}
+            m_TargetAssemblyTypeName: Wallet, Assembly-CSharp
+            m_MethodName: AddMoney
+            m_Mode: 3
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 100
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+    - QuestConfig: {fileID: 11400000, guid: 7958c39119b476543b6af56990003529, type: 2}
+      RewardText: Claim 100 Money
+      OnClaim:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 331710093}
+            m_TargetAssemblyTypeName: Wallet, Assembly-CSharp
+            m_MethodName: AddMoney
+            m_Mode: 3
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 100
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+  resetable: 0
 --- !u!1 &2092153477
 GameObject:
   m_ObjectHideFlags: 0
@@ -8625,3 +8656,4 @@ SceneRoots:
   - {fileID: 69913117}
   - {fileID: 331710092}
   - {fileID: 1915558998}
+  - {fileID: 2038663712}

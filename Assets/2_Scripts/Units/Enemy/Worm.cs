@@ -2,7 +2,7 @@
 
 namespace Base.Spawner
 {
-    internal class Worm : Enemy
+    public class Worm : Enemy
     {
     }
 }

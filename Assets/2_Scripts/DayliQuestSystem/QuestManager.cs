@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class QuestManager : MonoBehaviour
 {
+    public static QuestManager Instance;
+
     [SerializeField] private List<DailyQuestsConfig> dailyQuestConfigs = new();
     [SerializeField] private bool resetable;
 
@@ -17,6 +19,15 @@ public class QuestManager : MonoBehaviour
 
     private void Awake()
     {
+        if(Instance != null)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        Instance = this;    
+        DontDestroyOnLoad(gameObject);
+
         timeTracker = new TimeTracker(resetable);
 
         Load();
