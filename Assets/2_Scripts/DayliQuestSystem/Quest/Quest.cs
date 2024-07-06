@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.Events;
 public class Quest
 {
-    public Action<int, bool> OnStateChange;
+    public UnityEvent<int, bool> OnStateChange = new();
     public event Action OnClaim;
 
     private readonly QuestManager questManager;

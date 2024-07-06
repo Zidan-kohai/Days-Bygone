@@ -27,7 +27,7 @@ public class DailyQuestView : MonoBehaviour
         }
     }
 
-    private void InstantiateQuestView(string description, string reward, int progress, int maxProgress, bool isClaim, ref UnityEvent onClaim, Action claim, ref Action<int, bool> onStateChange)
+    private void InstantiateQuestView(string description, string reward, int progress, int maxProgress, bool isClaim, ref UnityEvent onClaim, Action claim, ref UnityEvent<int, bool> onStateChange)
     {
         QuestView questView = Instantiate(questViewPrefab, questContainer);
 

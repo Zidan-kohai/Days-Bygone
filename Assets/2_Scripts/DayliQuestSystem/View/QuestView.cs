@@ -1,7 +1,5 @@
 using System;
-using System.Security.Claims;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
@@ -13,13 +11,15 @@ public class QuestView : MonoBehaviour
     [SerializeField] private Slider progressSlider;
     [SerializeField] private Button button;
 
-    public void Init(string description, string reward, int currentProgress, int maxProgress, bool isClaim, ref UnityEvent onClaim, Action claim, ref Action<int, bool> onStateChange)
+    private UnityEvent<int, bool> onStateChange;
+    public void Init(string description, string reward, int currentProgress, int maxProgress, bool isClaim, ref UnityEvent onClaim, Action claim, ref UnityEvent<int, bool> onStateChange)
     {
         this.description.text = description;
         this.reward.text = reward;
         this.progressSlider.maxValue = maxProgress;
         this.progressSlider.value = currentProgress;
-        onStateChange += OnStateChage;
+        this.onStateChange = onStateChange;
+        onStateChange.AddListener(OnStateChage);
         onClaim.AddListener(DisableButton);
 
         if (isClaim || currentProgress < maxProgress)

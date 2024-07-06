@@ -18,6 +18,7 @@ namespace Base.Spawner
 
         [SerializeField] private List<Enemy> enemies = new List<Enemy>();
         [SerializeField] private bool isLastWave = false;
+        private bool isWined = false;
 
         private float minStartPos = -4, maxStartPos = 4;
 
@@ -115,10 +116,13 @@ namespace Base.Spawner
         {
             enemies.Remove(enemy);
 
+            if (isWined) return;
+
             if (!isLastWave) return;
 
             if (enemies.Count == 0)
             {
+                isWined = true;
                 gameWindowController.Win();
             }
         }
