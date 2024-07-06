@@ -1,6 +1,8 @@
 using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class QuestManager : MonoBehaviour
 {
@@ -9,11 +11,52 @@ public class QuestManager : MonoBehaviour
 
     private List<DailyQuests> dailyQuests = new();
     private TimeTracker timeTracker;
-
+    
     #region SaveData
     private const string SaveDataKey = "DailyQuestSaveDataKey";
     private List<DailyQuestsData> dailyQuestData = new();
     #endregion
+
+    [SerializeField] private List<DailyEvent> dailyEvents = new();
+
+    private void OnValidate()
+    {
+        List<DailyEvent> newDailyEvents = new();
+
+        if(dailyQuests.Count != dailyEvents.Count)
+        {
+            foreach (DailyQuests dailyQuest in dailyQuests)
+            {
+                DailyEvent dailyEvent = new DailyEvent();
+
+                foreach (Quest quest in dailyQuest.Quests)
+                {
+                    QuestEvent questEvent = new QuestEvent();
+                    questEvent.QuestName = quest.GetQuestType.ToString();
+
+                    dailyEvent.QuestEvent.Add(questEvent);
+                }
+
+                newDailyEvents.Add(dailyEvent);
+            }
+        }
+
+        for (int i = 0; i < dailyQuests.Count; i++)
+        {
+            foreach (DailyEvent dailyEvent in dailyEvents)
+            {
+                foreach (QuestEvent questEvent in dailyEvents[i].QuestEvent)
+                {
+                    newDailyEvents[i].QuestEvent.Add(questEvent);
+                }
+            }
+
+            if (this.dailyEvents[i].QuestEvent.Count < dailyQuests[i].Quests.Count)
+            {
+                
+            }
+        }
+    }
 
     private void Awake()
     {
@@ -75,5 +118,19 @@ public class QuestManager : MonoBehaviour
         string json = JsonConvert.SerializeObject(dailyQuestData);
 
         PlayerPrefs.SetString(SaveDataKey,json);
+    }
+
+    [Serializable]
+    public class DailyEvent
+    {
+        public string DayName;
+        public List<QuestEvent> QuestEvent = new();
+    }
+
+    [Serializable]
+    public class QuestEvent
+    {
+        public string QuestName;
+        public UnityAction OnClaim;
     }
 }
