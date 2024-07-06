@@ -1,5 +1,6 @@
 using Base.Data;
 using System;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
@@ -12,6 +13,7 @@ public class AudioController : MonoBehaviour
     private void Start()
     {
         MusicToggle.isOn = Data.Instance.SaveData.IsMusicOn;
+        OnToggleValueChanged(MusicToggle.isOn);
 
         MusicToggle.onValueChanged.AddListener(OnToggleValueChanged);
     }
