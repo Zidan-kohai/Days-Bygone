@@ -29,6 +29,8 @@ public class QuestManager : MonoBehaviour
         for (int i = 0; i < dailyQuestConfigs.Count; i++)
         {
             DailyQuests dailyCuest = new DailyQuests(this, dailyQuestConfigs[i].questConfigs, dailyQuestData[i]);
+
+            this.dailyQuests.Add(dailyCuest);
         }
     }
 
@@ -48,9 +50,22 @@ public class QuestManager : MonoBehaviour
 
     private void Load()
     {
-        string json = PlayerPrefs.HasKey(SaveDataKey) ? 
-            PlayerPrefs.GetString(SaveDataKey) : 
-            JsonConvert.SerializeObject(new List<DailyQuestsData>(dailyQuestData.Count));
+        string json;
+
+        if (PlayerPrefs.HasKey(SaveDataKey))
+        {
+            json = PlayerPrefs.GetString(SaveDataKey);
+        }
+        else
+        {
+            List<DailyQuestsData> emptyList = new List<DailyQuestsData>();
+            for (int i = 0; i < dailyQuestConfigs.Count; i++)
+            {
+                emptyList.Add(new DailyQuestsData());
+            }
+
+            json = JsonConvert.SerializeObject(emptyList);
+        }
 
         dailyQuestData = JsonConvert.DeserializeObject<List<DailyQuestsData>>(json);
     }

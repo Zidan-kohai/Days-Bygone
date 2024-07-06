@@ -19,7 +19,9 @@ public class DailyQuests
     }
 
     private void InitQuest()
-    {
+    { 
+        Quests = new();
+
         for (int i = 0; i < questConfigs.Count; i++)
         {
             Quest quest = new Quest(questManager, questConfigs[i], data.QuestDatas[i]);
