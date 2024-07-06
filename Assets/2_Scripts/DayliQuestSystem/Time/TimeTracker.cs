@@ -9,11 +9,16 @@ public class TimeTracker
 
     public int GetDayCount => loginData.DayCount;
 
-    public TimeTracker(bool resetable)
+    public TimeTracker(bool resetable, int dayCount, bool loop)
     {
         Load();
 
         Init(resetable);
+
+        if(loop)
+        {
+            loginData.DayCount %= dayCount;
+        }
     }
 
     private void Init(bool resetable)

@@ -8,6 +8,7 @@ public class QuestManager : MonoBehaviour
 
     [SerializeField] private List<DailyQuestsConfig> dailyQuestConfigs = new();
     [SerializeField] private bool resetable;
+    [SerializeField] private bool loop;
 
     private List<DailyQuests> dailyQuests = new();
     private TimeTracker timeTracker;
@@ -28,7 +29,7 @@ public class QuestManager : MonoBehaviour
         Instance = this;    
         DontDestroyOnLoad(gameObject);
 
-        timeTracker = new TimeTracker(resetable);
+        timeTracker = new TimeTracker(resetable, dailyQuestConfigs.Count, loop);
 
         Load();
 
