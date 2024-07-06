@@ -5,5 +5,6 @@ using UnityEngine.Events;
 public class QuestConfigAndEventProvider
 {
     public QuestConfig QuestConfig;
+    public string RewardText;
     public UnityEvent OnClaim;
 }

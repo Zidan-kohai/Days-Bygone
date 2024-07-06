@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.Events;
 public class Quest
 {
-    public event Action<int, bool> OnStateChange;
+    public Action<int, bool> OnStateChange;
     public event Action OnClaim;
 
     private readonly QuestManager questManager;
@@ -15,6 +15,7 @@ public class Quest
     public int GetMaxProgress => config.MaxProgress;
     public int GetCurrentProgress => data.Progress;
     public string GetDescription => config.Description;
+    public bool GetIsClaimed => data.IsClaimed;
 
     public Quest (QuestManager questManager, QuestConfig config, UnityEvent onClaim, QuestData data)
     {
@@ -26,6 +27,8 @@ public class Quest
 
     public void Increament(int delta)
     {
+        if (data.Progress >= config.MaxProgress) return;
+
         data.Progress += delta;
 
         data.Progress = Mathf.Clamp(data.Progress, 0, config.MaxProgress + 1);
