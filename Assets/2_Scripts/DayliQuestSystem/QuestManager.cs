@@ -72,7 +72,14 @@ public class QuestManager : MonoBehaviour
             List<DailyQuestsData> emptyList = new List<DailyQuestsData>();
             for (int i = 0; i < dailyQuestConfigs.Count; i++)
             {
-                emptyList.Add(new DailyQuestsData());
+                List<QuestData> questDatas = new List<QuestData>();
+                for (int j = 0; j < 10; j++)
+                {
+                    QuestData data = new QuestData();
+                    questDatas.Add(data);
+                }
+
+                emptyList.Add(new DailyQuestsData(questDatas));
             }
 
             json = JsonConvert.SerializeObject(emptyList);

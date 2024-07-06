@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 
 [Serializable]
@@ -6,12 +7,9 @@ public class DailyQuestsData
 {
     public List<QuestData> QuestDatas = new List<QuestData>();
 
-    public DailyQuestsData()
+    [JsonConstructor]
+    public DailyQuestsData(List<QuestData> questData)
     {
-        for (int i = 0; i < 10; i++)
-        { 
-            QuestData data = new QuestData();
-            QuestDatas.Add(data);
-        }
+        QuestDatas = questData;
     }
 }
