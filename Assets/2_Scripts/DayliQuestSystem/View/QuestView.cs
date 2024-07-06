@@ -13,7 +13,7 @@ public class QuestView : MonoBehaviour
     [SerializeField] private Slider progressSlider;
     [SerializeField] private Button button;
 
-    public void Init(string description, string reward, int currentProgress, int maxProgress, bool isClaim, UnityEvent onClaim, Action claim, Action<int, bool> onStateChange)
+    public void Init(string description, string reward, int currentProgress, int maxProgress, bool isClaim, ref UnityEvent onClaim, Action claim, ref Action<int, bool> onStateChange)
     {
         this.description.text = description;
         this.reward.text = reward;

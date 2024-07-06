@@ -21,17 +21,17 @@ public class DailyQuestView : MonoBehaviour
                 dailyQuest.Quests[i].GetCurrentProgress, 
                 dailyQuest.Quests[i].GetMaxProgress,
                 dailyQuest.Quests[i].GetIsClaimed,
-                dailyQuest.QuestConfigAndEventProvider[i].OnClaim,
+                ref dailyQuest.QuestConfigAndEventProvider[i].OnClaim,
                 dailyQuest.Quests[i].Claim,
-                dailyQuest.Quests[i].OnStateChange);
+                ref dailyQuest.Quests[i].OnStateChange);
         }
     }
 
-    private void InstantiateQuestView(string description, string reward, int progress, int maxProgress, bool isClaim, UnityEvent onClaim, Action claim, Action<int, bool> onStateChange)
+    private void InstantiateQuestView(string description, string reward, int progress, int maxProgress, bool isClaim, ref UnityEvent onClaim, Action claim, ref Action<int, bool> onStateChange)
     {
         QuestView questView = Instantiate(questViewPrefab, questContainer);
 
-        questView.Init(description, reward, progress, maxProgress, isClaim, onClaim, claim, onStateChange);
+        questView.Init(description, reward, progress, maxProgress, isClaim, ref onClaim, claim, ref onStateChange);
 
         questViews.Add(questView);
     }

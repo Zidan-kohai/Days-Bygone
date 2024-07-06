@@ -55,6 +55,13 @@ namespace Randoms.DailyReward
             cantTakePanel.SetActive(false);
             takenPanel.SetActive(false);
 
+            if (QuestManager.Instance.TryGetCurrentDailyQuests(out DailyQuests dailyQuest))
+            {
+                if (dailyQuest.TryGetQuestWithType(QuestType.TakeTheDailyReward, out Quest quest))
+                {
+                    quest.Increament(1);
+                }
+            }
         }
 
         private void AddDefaultUiState ()

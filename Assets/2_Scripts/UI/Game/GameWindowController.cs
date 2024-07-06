@@ -2,12 +2,14 @@ using Base.Data;
 using System.Data;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameWindowController : MonoBehaviour
 {
     [SerializeField] private GameObject WinPanel;
     [SerializeField] private GameObject LosePanel;
     [SerializeField] private GameObject PausePanel;
+    [SerializeField] private Slider healthSlider;
 
     private bool isFinish = false;
 
@@ -30,6 +32,15 @@ public class GameWindowController : MonoBehaviour
 
     public void Win()
     {
+        if (healthSlider.value == healthSlider.maxValue)
+        {
+            if (QuestManager.Instance.TryGetCurrentDailyQuests(out DailyQuests dailyQuest) &&
+                dailyQuest.TryGetQuestWithType(QuestType.WinTheGameWithoutLosingALife, out Quest quest))
+            {
+                quest.Increament(1);
+            }
+        }
+
         if (Data.Instance.CurrentLevel == 2)
         {
             if (QuestManager.Instance.TryGetCurrentDailyQuests(out DailyQuests dailyQuest)
@@ -37,6 +48,7 @@ public class GameWindowController : MonoBehaviour
             {
                 quest.Increament(1);
             }
+
         }
 
         if (isFinish) return;

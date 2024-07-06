@@ -4232,6 +4232,7 @@ MonoBehaviour:
   WinPanel: {fileID: 1273454971}
   LosePanel: {fileID: 1303264706}
   PausePanel: {fileID: 2129451140}
+  healthSlider: {fileID: 302182196}
 --- !u!1 &2129451140
 GameObject:
   m_ObjectHideFlags: 0
