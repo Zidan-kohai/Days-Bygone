@@ -15,6 +15,6 @@ MonoBehaviour:
   textOnAvailable: AVAILABLE
   timerTextPrefix: Next Reward In
   timerTextPostfix: TIME
-  useCustomClaimButton: 1
+  useCustomClaimButton: 0
   useDefaultStyling: 0
   useRedeem: 0

@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Serber
   m_EditorClassIdentifier: 
   Health: 2200
-  Speed: 0.3
+  Speed: 0.8
   Damage: 100
   Reward: 400
