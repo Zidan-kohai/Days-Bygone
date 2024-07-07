@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68a287979c469864b81759b8bf06e3de, type: 3}
   m_Name: MushroomMan
   m_EditorClassIdentifier: 
-  Health: 150
+  Health: 200
   Speed: 1
   Damage: 3
   Reward: 15

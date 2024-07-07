@@ -202,7 +202,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1604070495
+  m_SortingLayerID: -1357597247
   m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: c1c06d712289f0047967d28ecb049602, type: 3}
@@ -3542,6 +3542,7 @@ MonoBehaviour:
   - {fileID: 8669912051491261649, guid: 7e76ceac73b14af4090cba42c7020530, type: 3}
   - {fileID: 2635329256079294531, guid: 8c6e3d5ae3fff7b46b557fb4fab6e9f8, type: 3}
   - {fileID: 4194470413932473896, guid: 56f68056362028148968b2a80a6975ef, type: 3}
+  nextLevel: {fileID: 942702764}
   enemies: []
   isLastWave: 0
 --- !u!4 &1690731833 stripped

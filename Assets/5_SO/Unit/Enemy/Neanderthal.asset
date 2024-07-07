@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68a287979c469864b81759b8bf06e3de, type: 3}
   m_Name: Neanderthal
   m_EditorClassIdentifier: 
-  Health: 120
+  Health: 160
   Speed: 2.5
   Damage: 3
   Reward: 7

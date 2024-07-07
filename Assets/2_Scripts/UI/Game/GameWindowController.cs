@@ -56,6 +56,7 @@ public class GameWindowController : MonoBehaviour
 
         TryOpenNewLevel();
         Time.timeScale = 0.0f;
+
         WinPanel.SetActive(true);
 
 

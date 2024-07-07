@@ -18,17 +18,17 @@ MonoBehaviour:
     - Type: 7
       Count: 3
     - Type: 5
-      Count: 2
+      Count: 3
   - time: 7
     enemies:
     - Type: 3
-      Count: 2
+      Count: 5
   - time: 15
     enemies:
     - Type: 4
       Count: 3
     - Type: 5
-      Count: 1
+      Count: 3
     - Type: 6
       Count: 1
   - time: 20
@@ -36,14 +36,26 @@ MonoBehaviour:
     - Type: 5
       Count: 3
     - Type: 1
-      Count: 1
+      Count: 2
   - time: 30
     enemies:
     - Type: 9
       Count: 5
     - Type: 5
-      Count: 1
+      Count: 2
   - time: 40
     enemies:
+    - Type: 10
+      Count: 1
+  - time: 45
+    enemies:
     - Type: 14
-      Count: 5
+      Count: 1
+  - time: 50
+    enemies:
+    - Type: 13
+      Count: 1
+  - time: 55
+    enemies:
+    - Type: 11
+      Count: 1

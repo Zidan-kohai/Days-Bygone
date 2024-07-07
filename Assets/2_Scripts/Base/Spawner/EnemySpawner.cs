@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unit.Enemy.Base;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Base.Spawner
 {
@@ -11,6 +12,8 @@ namespace Base.Spawner
         [SerializeField] private GameWindowController gameWindowController;
         [SerializeField] private List<Level> levels = new List<Level>();
         [SerializeField] private List<Enemy> enemiesPrefab;
+        [SerializeField] private Button nextLevel;
+
 
         private ObjectPool<Enemy> enemyPool;
 
@@ -37,6 +40,13 @@ namespace Base.Spawner
                 Wave wave = levels[currentLevel].Waves[i];
 
                 StartCoroutine(Wave(wave.time, wave.enemies, i == waveCount - 1));
+            }
+
+
+
+            if (Data.Data.Instance.CurrentLevel == levels.Count)
+            {
+                nextLevel.interactable = false;
             }
         }
 

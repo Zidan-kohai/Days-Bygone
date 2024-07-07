@@ -20,22 +20,22 @@ MonoBehaviour:
   - time: 7
     enemies:
     - Type: 8
-      Count: 3
+      Count: 5
   - time: 15
     enemies:
     - Type: 7
       Count: 4
     - Type: 1
-      Count: 1
+      Count: 3
     - Type: 5
       Count: 1
   - time: 20
     enemies:
     - Type: 5
-      Count: 2
+      Count: 3
     - Type: 6
-      Count: 1
+      Count: 2
   - time: 30
     enemies:
     - Type: 8
-      Count: 5
+      Count: 7

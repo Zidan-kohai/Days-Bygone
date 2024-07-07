@@ -34,6 +34,8 @@ namespace Unit.Enemy.Base
             this.onDeath += onDeath;
 
             ChangeState(EnemyState.Walk, true);
+
+            spriteRenderer.sortingOrder = -(int)(transform.position.y * 100);
         }
 
         private void Update()
