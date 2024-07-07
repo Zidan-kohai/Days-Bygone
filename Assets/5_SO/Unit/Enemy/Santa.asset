@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Santa
   m_EditorClassIdentifier: 
   Health: 1800
-  Speed: 0.7
+  Speed: 0.9
   Damage: 80
   Reward: 300

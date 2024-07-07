@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Demon
   m_EditorClassIdentifier: 
   Health: 1400
-  Speed: 0.6
+  Speed: 0.8
   Damage: 60
   Reward: 200

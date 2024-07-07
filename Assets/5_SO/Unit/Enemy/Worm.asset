@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Worm
   m_EditorClassIdentifier: 
   Health: 2600
-  Speed: 0.9
+  Speed: 1
   Damage: 120
   Reward: 500

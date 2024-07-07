@@ -1,10 +1,8 @@
 using ObjectPool.Base;
-using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using Unit.Enemy.Base;
 using UnityEngine;
-using static Unity.Burst.Intrinsics.Arm;
 
 namespace Base.Spawner
 {
@@ -83,18 +81,48 @@ namespace Base.Spawner
                             Init(enemyPool.GetFree<Slime>());
                             break;
                         case EnemyType.BigGoblin:
+                            if(enemies.Count > 0) 
+                            {
+                                yield return new WaitForSeconds(2);
+                                i--;
+                                continue;
+                            }
                             Init(enemyPool.GetFree<BigGoblin>());
                             break;
                         case EnemyType.Demon:
+                            if (enemies.Count > 0)
+                            {
+                                yield return new WaitForSeconds(2);
+                                i--;
+                                continue;
+                            }
                             Init(enemyPool.GetFree<Demon>());
                             break;
                         case EnemyType.Serber:
+                            if (enemies.Count > 0)
+                            {
+                                yield return new WaitForSeconds(2);
+                                i--;
+                                continue;
+                            }
                             Init(enemyPool.GetFree<Serber>());
                             break;
                         case EnemyType.Worm:
+                            if (enemies.Count > 0)
+                            {
+                                yield return new WaitForSeconds(2);
+                                i--;
+                                continue;
+                            }
                             Init(enemyPool.GetFree<Worm>());
                             break;
                         case EnemyType.Santa:
+                            if (enemies.Count > 0)
+                            {
+                                yield return new WaitForSeconds(2);
+                                i--;
+                                continue;
+                            }
                             Init(enemyPool.GetFree<Santa>());
                             break;
                     }

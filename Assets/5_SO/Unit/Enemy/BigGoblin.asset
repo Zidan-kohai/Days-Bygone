@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: BigGoblin
   m_EditorClassIdentifier: 
   Health: 1000
-  Speed: 0.5
+  Speed: 0.7
   Damage: 40
   Reward: 100
