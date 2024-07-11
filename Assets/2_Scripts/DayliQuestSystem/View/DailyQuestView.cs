@@ -17,7 +17,7 @@ public class DailyQuestView : MonoBehaviour
         for (int i = 0; i < dailyQuest.Quests.Count; i++)
         {
             InstantiateQuestView(dailyQuest.Quests[i].GetDescription, 
-                dailyQuest.QuestConfigAndEventProvider[i].RewardText, 
+                dailyQuest.Quests[i].GetRewardText, 
                 dailyQuest.Quests[i].GetCurrentProgress, 
                 dailyQuest.Quests[i].GetMaxProgress,
                 dailyQuest.Quests[i].GetIsClaimed,

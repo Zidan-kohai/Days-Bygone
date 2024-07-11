@@ -9,15 +9,21 @@ public class TimeTracker
 
     public int GetDayCount => loginData.DayCount;
 
-    public TimeTracker(bool resetable, int dayCount, bool loop)
+    public TimeTracker(QuestManager questManager, bool resetable, int dayCount, bool loop)
     {
         Load();
 
         Init(resetable);
 
-        if(loop)
+        if(loop && loginData.DayCount > dayCount)
         {
-            loginData.DayCount %= dayCount;
+            for(int i = dayCount; i < loginData.DayCount; i++)
+            {
+                DailyQuestsConfig dailyQuestsConfig = questManager.dailyQuestConfigs[i % dayCount];
+
+                questManager.dailyQuestConfigs.Add(dailyQuestsConfig);
+
+            }
         }
     }
 
@@ -39,6 +45,8 @@ public class TimeTracker
         {
             loginData.DayCount++;
         }
+
+        Debug.Log($"<color=green>DayliQuest DayCount {loginData.DayCount}</color>");
     }
 
     public bool IsExactlyOneDayPassed()
@@ -57,9 +65,11 @@ public class TimeTracker
     {
         string json = PlayerPrefs.GetString(LastLoginKey, JsonConvert.SerializeObject(new LoginData()));
         loginData = JsonConvert.DeserializeObject<LoginData>(json);
+
+        Debug.Log($"<color=green>DayliQuest LOAD {loginData.DateTime}</color>");
     }
 
-    private void Save()
+    public void Save()
     {
 
         loginData.DateTime = DateTime.Now;
@@ -67,6 +77,8 @@ public class TimeTracker
         string json = JsonConvert.SerializeObject(loginData);
 
         PlayerPrefs.SetString(LastLoginKey, json);
+
+        Debug.Log($"<color=green>DayliQuest SAVE {loginData.DateTime}</color>");
     }
 
     
@@ -76,10 +88,5 @@ public class TimeTracker
         DateTime currentLogin = DateTime.Now;
 
         return currentLogin - lastLogin;
-    }
-
-    ~TimeTracker()
-    {
-        Save();
     }
 }

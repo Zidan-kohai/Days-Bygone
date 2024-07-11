@@ -15,3 +15,4 @@ MonoBehaviour:
   <QuestType>k__BackingField: 4
   <MaxProgress>k__BackingField: 10
   <Description>k__BackingField: Play the game for 10 minutes
+  <RewardText>k__BackingField: Claim 30 Money

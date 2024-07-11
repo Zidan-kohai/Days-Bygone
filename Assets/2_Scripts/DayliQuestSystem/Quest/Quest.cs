@@ -16,6 +16,7 @@ public class Quest
     public int GetCurrentProgress => data.Progress;
     public string GetDescription => config.Description;
     public bool GetIsClaimed => data.IsClaimed;
+    public string GetRewardText => config.RewardText;
 
     public Quest (QuestManager questManager, QuestConfig config, UnityEvent onClaim, QuestData data)
     {

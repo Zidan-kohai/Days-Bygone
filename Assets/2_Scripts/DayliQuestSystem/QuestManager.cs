@@ -6,7 +6,7 @@ public class QuestManager : MonoBehaviour
 {
     public static QuestManager Instance;
 
-    [SerializeField] private List<DailyQuestsConfig> dailyQuestConfigs = new();
+    [field: SerializeField] public List<DailyQuestsConfig> dailyQuestConfigs { get; private set; } = new();
     [SerializeField] private bool resetable;
     [SerializeField] private bool loop;
 
@@ -29,7 +29,7 @@ public class QuestManager : MonoBehaviour
         Instance = this;    
         DontDestroyOnLoad(gameObject);
 
-        timeTracker = new TimeTracker(resetable, dailyQuestConfigs.Count, loop);
+        timeTracker = new TimeTracker(this, resetable, dailyQuestConfigs.Count, loop);
 
         Load();
 
@@ -56,7 +56,7 @@ public class QuestManager : MonoBehaviour
             return false;
         }
 
-        dailyQuest = dailyQuests[timeTracker.GetDayCount];
+        dailyQuest = dailyQuests[timeTracker.GetDayCount - 1];
         return true;
     }
 
@@ -94,5 +94,17 @@ public class QuestManager : MonoBehaviour
         string json = JsonConvert.SerializeObject(dailyQuestData);
 
         PlayerPrefs.SetString(SaveDataKey,json);
+
+        timeTracker.Save();
+    }
+
+    private void OnApplicationFocus()
+    {
+        timeTracker.Save();
+    }
+
+    private void OnApplicationQuit()
+    {
+        timeTracker.Save();
     }
 }
