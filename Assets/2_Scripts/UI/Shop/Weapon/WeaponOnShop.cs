@@ -62,6 +62,12 @@ public class WeaponOnShop : MonoBehaviour
                     Wallet.Instance.SubstructMoney(data.UpgrateCost);
                     Data.Instance.UpgrateWeapon(weaponId);
                     ChangeInfo();
+
+                    if (QuestManager.Instance.TryGetCurrentDailyQuests(out DailyQuests dailyQuest)
+                    && dailyQuest.TryGetQuestWithType(QuestType.UpgradeOneWeapon, out Quest quest))
+                    {
+                        quest.Increament(1);
+                    }
                 });
             }
             

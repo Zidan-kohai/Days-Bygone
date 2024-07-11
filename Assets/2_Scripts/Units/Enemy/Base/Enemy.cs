@@ -108,7 +108,7 @@ namespace Unit.Enemy.Base
             }
         }
 
-        protected void OnDeath()
+        protected virtual void OnDeath()
         {
             rb.velocity = Vector3.zero;
             Debug.Log("Death");

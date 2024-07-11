@@ -1,8 +1,7 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 namespace Base.Data
 {
@@ -29,6 +28,22 @@ namespace Base.Data
             Instance = this;
             DontDestroyOnLoad(gameObject);
             Load();
+
+            StartCoroutine(TimeTreacker());
+        }
+
+        private IEnumerator TimeTreacker()
+        {
+            while (true)
+            {
+                yield return new WaitForSeconds(1);
+
+                if (QuestManager.Instance.TryGetCurrentDailyQuests(out DailyQuests dailyQuest)
+                && dailyQuest.TryGetQuestWithType(QuestType.PlayTheGameFor10Minutes, out Quest quest))
+                {
+                    quest.Increament(1);
+                }
+            }
         }
 
         public int GetOpenedLevel => SaveData.OpenLevel;

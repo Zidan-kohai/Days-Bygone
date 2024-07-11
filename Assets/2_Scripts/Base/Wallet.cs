@@ -24,6 +24,14 @@ public class Wallet : MonoBehaviour
     {
         Data.Instance.ChangeMoney(money);
         onMoneyChange?.Invoke();
+
+        if (QuestManager.Instance.TryGetCurrentDailyQuests(out DailyQuests dailyQuest))
+        {
+            if (dailyQuest.TryGetQuestWithType(QuestType.Earn300Coins, out Quest quest))
+            {
+                quest.Increament(money);
+            }
+        }
     }
 
     public void SubstructMoney(int money)

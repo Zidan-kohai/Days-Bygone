@@ -37,6 +37,13 @@ public class FenceOnShop : MonoBehaviour
             Wallet.Instance.SubstructMoney(data.FenceUprgadeCost);
             Data.Instance.UpgrateFence();
             ChangeInfo();
+
+
+            if (QuestManager.Instance.TryGetCurrentDailyQuests(out DailyQuests dailyQuest)
+                    && dailyQuest.TryGetQuestWithType(QuestType.PumpWall3Times, out Quest quest))
+            {
+                quest.Increament(1);
+            }
         });
     }
 }

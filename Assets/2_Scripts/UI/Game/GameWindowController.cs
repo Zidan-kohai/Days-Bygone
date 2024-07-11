@@ -1,4 +1,5 @@
 using Base.Data;
+using System.Data;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -29,12 +30,23 @@ public class GameWindowController : MonoBehaviour
 
     public void Win()
     {
+        if (Data.Instance.CurrentLevel == 2)
+        {
+            if (QuestManager.Instance.TryGetCurrentDailyQuests(out DailyQuests dailyQuest)
+                && dailyQuest.TryGetQuestWithType(QuestType.PassSecondLevel, out Quest quest))
+            {
+                quest.Increament(1);
+            }
+        }
+
         if (isFinish) return;
         isFinish = true;
 
         TryOpenNewLevel();
         Time.timeScale = 0.0f;
         WinPanel.SetActive(true);
+
+
     }
 
     public void Lose()

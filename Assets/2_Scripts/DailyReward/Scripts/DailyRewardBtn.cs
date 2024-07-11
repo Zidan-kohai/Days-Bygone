@@ -54,6 +54,7 @@ namespace Randoms.DailyReward
         {
             cantTakePanel.SetActive(false);
             takenPanel.SetActive(false);
+
         }
 
         private void AddDefaultUiState ()
