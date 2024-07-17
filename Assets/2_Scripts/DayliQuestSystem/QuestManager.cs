@@ -15,7 +15,7 @@ public class QuestManager : MonoBehaviour
     
     #region SaveData
     private const string SaveDataKey = "DailyQuestSaveDataKey";
-    private List<DailyQuestsData> dailyQuestData = new();
+    public List<DailyQuestsData> dailyQuestData { get; private set; } = new();
     #endregion
 
     private void Awake()
@@ -50,7 +50,7 @@ public class QuestManager : MonoBehaviour
     {
         dailyQuest = null; 
 
-        if (dailyQuests.Count <= timeTracker.GetDayCount)
+        if (dailyQuests.Count < timeTracker.GetDayCount)
         {
             Debug.Log($"Have`t Quest for {timeTracker.GetDayCount} day");
             return false;
@@ -74,6 +74,7 @@ public class QuestManager : MonoBehaviour
             for (int i = 0; i < dailyQuestConfigs.Count; i++)
             {
                 List<QuestData> questDatas = new List<QuestData>();
+
                 for (int j = 0; j < 10; j++)
                 {
                     QuestData data = new QuestData();
@@ -87,6 +88,22 @@ public class QuestManager : MonoBehaviour
         }
 
         dailyQuestData = JsonConvert.DeserializeObject<List<DailyQuestsData>>(json);
+
+        if(dailyQuestConfigs.Count > dailyQuestData.Count)
+        {
+            for(int i = dailyQuestData.Count; i < dailyQuestConfigs.Count; i++)
+            {
+                List<QuestData> questDatas = new List<QuestData>();
+
+                for (int j = 0; j < 10; j++)
+                {
+                    QuestData data = new QuestData();
+                    questDatas.Add(data);
+                }
+
+                dailyQuestData.Add(new DailyQuestsData(questDatas));
+            }
+        }
     }
 
     public void Save()

@@ -36,7 +36,7 @@ namespace Base.Data
         {
             while (true)
             {
-                yield return new WaitForSeconds(1);
+                yield return new WaitForSeconds(60);
 
                 if (QuestManager.Instance.TryGetCurrentDailyQuests(out DailyQuests dailyQuest)
                 && dailyQuest.TryGetQuestWithType(QuestType.PlayTheGameFor10Minutes, out Quest quest))

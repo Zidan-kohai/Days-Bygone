@@ -1,5 +1,6 @@
 using Newtonsoft.Json;
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class TimeTracker
@@ -22,7 +23,6 @@ public class TimeTracker
                 DailyQuestsConfig dailyQuestsConfig = questManager.dailyQuestConfigs[i % dayCount];
 
                 questManager.dailyQuestConfigs.Add(dailyQuestsConfig);
-
             }
         }
     }

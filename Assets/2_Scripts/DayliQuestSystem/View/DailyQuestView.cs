@@ -12,18 +12,20 @@ public class DailyQuestView : MonoBehaviour
 
     private void Start()
     {
-        QuestManager.Instance.TryGetCurrentDailyQuests(out DailyQuests dailyQuest);
-
-        for (int i = 0; i < dailyQuest.Quests.Count; i++)
+        if (QuestManager.Instance.TryGetCurrentDailyQuests(out DailyQuests dailyQuest))
         {
-            InstantiateQuestView(dailyQuest.Quests[i].GetDescription, 
-                dailyQuest.Quests[i].GetRewardText, 
-                dailyQuest.Quests[i].GetCurrentProgress, 
-                dailyQuest.Quests[i].GetMaxProgress,
-                dailyQuest.Quests[i].GetIsClaimed,
-                ref dailyQuest.QuestConfigAndEventProvider[i].OnClaim,
-                dailyQuest.Quests[i].Claim,
-                ref dailyQuest.Quests[i].OnStateChange);
+
+            for (int i = 0; i < dailyQuest.Quests.Count; i++)
+            {
+                InstantiateQuestView(dailyQuest.Quests[i].GetDescription,
+                    dailyQuest.Quests[i].GetRewardText,
+                    dailyQuest.Quests[i].GetCurrentProgress,
+                    dailyQuest.Quests[i].GetMaxProgress,
+                    dailyQuest.Quests[i].GetIsClaimed,
+                    ref dailyQuest.QuestConfigAndEventProvider[i].OnClaim,
+                    dailyQuest.Quests[i].Claim,
+                    ref dailyQuest.Quests[i].OnStateChange);
+            }
         }
     }
 
